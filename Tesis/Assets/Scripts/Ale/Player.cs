@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
 {
     private Rigidbody _rb;
+    private Animator _anim;
     
     [SerializeField] private float _speed = 5;
     [SerializeField] private float _speedRotation = 50;
@@ -15,6 +17,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
