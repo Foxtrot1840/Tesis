@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float _jumpForce = 5;
     [SerializeField] private GameObject _bullet;
     [SerializeField] private GameObject _shootPoint;
+    [SerializeField] private GameObject _aim;
+    [SerializeField] private GameObject _sword;
     private bool _isZoom;
 
     void Start()
@@ -36,7 +38,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             _anim.SetTrigger("Jump");
             _rb.AddForce(transform.up * _jumpForce);
@@ -50,6 +52,8 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Fire2"))
         {
             _isZoom = !_isZoom;
+            _aim.SetActive(_isZoom);
+            _sword.SetActive(!_isZoom);
             _anim.SetBool("Zoom",_isZoom);
         }
     }
@@ -76,7 +80,14 @@ public class Player : MonoBehaviour
 
     public void Shoot()
     {
-        Instantiate(_bullet, _shootPoint.transform.position, Quaternion.Euler(new Vector3(0,_shootPoint.transform.rotation.eulerAngles.y +150 , 90)));
+        Instantiate(_bullet, _shootPoint.transform.position, Quaternion.Euler(_zoomCamera.transform.rotation.eulerAngles + new Vector3(-1,3.5f,0)));
+        //Instantiate(_bullet, _shootPoint.transform.position, Quaternion.Euler(new Vector3(0,_shootPoint.transform.rotation.eulerAngles.y +150 , 90)));
+    }
+
+    bool IsGrounded()
+    {
+        Debug.DrawLine(transform.position + transform.up * 0.5f,transform.position + transform.up*-1*0.6f, Color.cyan,5f);
+        return Physics.Raycast(transform.position + transform.up * 0.5f, transform.up * -1, 0.6f);
     }
 }
 ;
