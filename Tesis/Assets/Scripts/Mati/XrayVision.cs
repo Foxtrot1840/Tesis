@@ -13,16 +13,18 @@ public class XrayVision : MonoBehaviour
         mainCamera = Camera.main;
         stackData = mainCamera.GetUniversalAdditionalCameraData();
         isStacked = false;
+        CheckCameraPos();
     }
 
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            isStacked = !isStacked;
-            StackCamera();
-        }
+        CheckCameraPos();
+        
+        if (!Input.GetKeyDown(KeyCode.Q)) return;
+        
+        isStacked = !isStacked;
+        StackCamera();
     }
 
     private void StackCamera()
@@ -30,5 +32,9 @@ public class XrayVision : MonoBehaviour
         if (isStacked) stackData.cameraStack.Add(overlayCamera);
         else stackData.cameraStack.Remove(overlayCamera);
     }
-    
+
+    void CheckCameraPos()
+    {
+        overlayCamera.fieldOfView = mainCamera.fieldOfView;
+    }
 }

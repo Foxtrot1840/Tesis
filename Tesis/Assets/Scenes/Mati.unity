@@ -1424,15 +1424,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3220184910130369828, guid: 8f461c15e818639498a4cb2b28e3ef25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.16156839
+      value: 0.1615684
       objectReference: {fileID: 0}
     - target: {fileID: 3220184910130369828, guid: 8f461c15e818639498a4cb2b28e3ef25, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00082607626
+      value: 0.00082604005
       objectReference: {fileID: 0}
     - target: {fileID: 3220184910130369828, guid: 8f461c15e818639498a4cb2b28e3ef25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00013524476
+      value: -0.00013523885
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f461c15e818639498a4cb2b28e3ef25, type: 3}
@@ -4661,6 +4661,7 @@ MonoBehaviour:
   _shootPoint: {fileID: 3419960515218026872}
   _aim: {fileID: 1654944598}
   _sword: {fileID: 5020060657452455154}
+  _isZoom: 0
 --- !u!95 &5421551519838755070
 Animator:
   serializedVersion: 3

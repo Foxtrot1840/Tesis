@@ -9,14 +9,16 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+    
     private Rigidbody _rb;
     private Animator _anim;
     
     private CinemachineTransposer _normalCameraOffset;
     private CinemachineTransposer _zoomCameraOffset;
 
-    [SerializeField] private CinemachineVirtualCamera _normalCamera;
-    [SerializeField] private CinemachineVirtualCamera _zoomCamera;
+     public CinemachineVirtualCamera _normalCamera;
+     public CinemachineVirtualCamera _zoomCamera;
     [SerializeField] private float _speedAimRotation;
     [SerializeField] private float _speed = 5;
     [SerializeField] private float _speedRotation = 50;
@@ -25,7 +27,12 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject _shootPoint;
     [SerializeField] private GameObject _aim;
     [SerializeField] private GameObject _sword;
-    private bool _isZoom;
+    public bool _isZoom;
+
+    private void Awake()
+    {
+        if (instance != null) instance = this;
+    }
 
     void Start()
     {
