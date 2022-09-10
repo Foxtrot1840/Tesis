@@ -16,16 +16,19 @@ public class Hook : MonoBehaviour
 
     private bool _isGrapping, _isShooting;
     private Vector3 _hookPoint;
+    private Player _player;
 
     private void Start()
     {
         _isShooting = false;
         _isGrapping = false;
+        _player = _playerBody.GetComponent<Player>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && _player.isZoom)
         {
             ShootHook();
         }

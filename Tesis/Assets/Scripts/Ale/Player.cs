@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject _shootPoint;
     [SerializeField] private GameObject _aim;
     [SerializeField] private GameObject _sword;
-    public bool _isZoom;
+    public bool isZoom;
 
     private void Awake()
     {
@@ -58,10 +58,10 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Fire2"))
         {
-            _isZoom = !_isZoom;
-            _aim.SetActive(_isZoom);
-            _sword.SetActive(!_isZoom);
-            _anim.SetBool("Zoom",_isZoom);
+            isZoom = !isZoom;
+            _aim.SetActive(isZoom);
+            _sword.SetActive(!isZoom);
+            _anim.SetBool("Zoom",isZoom);
         }
     }
 
@@ -88,7 +88,6 @@ public class Player : MonoBehaviour
     public void Shoot()
     {
         Instantiate(_bullet, _shootPoint.transform.position, Quaternion.Euler(_zoomCamera.transform.rotation.eulerAngles + new Vector3(-1,3.5f,0)));
-        //Instantiate(_bullet, _shootPoint.transform.position, Quaternion.Euler(new Vector3(0,_shootPoint.transform.rotation.eulerAngles.y +150 , 90)));
     }
 
     bool IsGrounded()
