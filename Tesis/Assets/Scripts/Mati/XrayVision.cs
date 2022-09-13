@@ -15,8 +15,7 @@ public class XrayVision : MonoBehaviour
         isStacked = false;
         CheckCameraPos();
     }
-
-
+    
     private void Update()
     {
         CheckCameraPos();

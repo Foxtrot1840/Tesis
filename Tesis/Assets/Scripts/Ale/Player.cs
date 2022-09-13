@@ -16,9 +16,9 @@ public class Player : MonoBehaviour
     
     private CinemachineTransposer _normalCameraOffset;
     private CinemachineTransposer _zoomCameraOffset;
-
-     public CinemachineVirtualCamera _normalCamera;
-     public CinemachineVirtualCamera _zoomCamera;
+        
+    public CinemachineVirtualCamera _normalCamera;
+    public CinemachineVirtualCamera _zoomCamera;
     [SerializeField] private float _speedAimRotation;
     [SerializeField] private float _speed = 5;
     [SerializeField] private float _speedRotation = 50;

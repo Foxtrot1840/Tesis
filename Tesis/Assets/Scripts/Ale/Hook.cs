@@ -54,10 +54,10 @@ public class Hook : MonoBehaviour
     }
 
     private void LateUpdate()
-    {
-        _line.SetPosition(0, _handPos.position);
-        _line.SetPosition(1, _hookPoint);
-    }
+         {
+             _line.SetPosition(0, _handPos.position);
+             _line.SetPosition(1, _hookPoint);
+         }
 
     void ShootHook()
     {

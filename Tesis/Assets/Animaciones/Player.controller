@@ -163,7 +163,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mixamo_com
+  m_Name: Jump
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -177,7 +177,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 6db10728ad5565c47947f1ef4cc53b5f, type: 3}
+  m_Motion: {fileID: 7400000, guid: 51b0c0b59f4466943988ad127026f278, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -256,7 +256,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 233a6b4ac03f59344bbe75770cbd529f, type: 3}
+    m_Motion: {fileID: 7400000, guid: 3db33c1a14460bc41987c11f90705c92, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 1}
     m_TimeScale: 1
@@ -264,7 +264,7 @@ BlendTree:
     m_DirectBlendParameter: MovX
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 3b495ceb67af89f4c92925d166492f34, type: 3}
+    m_Motion: {fileID: 7400000, guid: f630000e973e75f4a946eb9344cf58a0, type: 2}
     m_Threshold: 0.25
     m_Position: {x: 0, y: -1}
     m_TimeScale: 1
@@ -272,7 +272,7 @@ BlendTree:
     m_DirectBlendParameter: MovX
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: c0178b9459bca824ea1b8bf5ae0b0def, type: 3}
+    m_Motion: {fileID: 7400000, guid: c10407869d50f6d41a8d1017881147dc, type: 2}
     m_Threshold: 0.5
     m_Position: {x: -1, y: 0}
     m_TimeScale: 1
@@ -280,7 +280,7 @@ BlendTree:
     m_DirectBlendParameter: MovX
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: fe57a4f6b0e5a9841ad81bcd4e777c66, type: 3}
+    m_Motion: {fileID: 7400000, guid: 6963bf76d3e3f1f42ad2f4905a0670c9, type: 2}
     m_Threshold: 0.75
     m_Position: {x: 1, y: 0}
     m_TimeScale: 1
@@ -288,7 +288,7 @@ BlendTree:
     m_DirectBlendParameter: MovX
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: a630d04a72792d645adca43231076b5b, type: 3}
+    m_Motion: {fileID: 7400000, guid: f083b242b41da7243b8e46c647f60437, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
