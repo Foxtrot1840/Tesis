@@ -22,7 +22,7 @@ public class Model
     private Controller _controller;
     private LineRenderer _line;
 
-    private bool _isGrapping;
+    private bool _isGrapping, _isHooked;
     private Vector3 _hookPoint;
 
     public Model(Controller controller, Rigidbody rb, Transform player, float speed, float speedRotation,
@@ -46,9 +46,9 @@ public class Model
 
     public void Move()
     {
-        Debug.Log("Move");
         Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
         _rb.MovePosition(_player.transform.position + Vector3.Normalize(_player.transform.right * dir.x + _player.transform.forward * dir.z) * _speed * Time.fixedDeltaTime);
+        _controller._view.UpdateMove(dir);
     }
 
     public void Rotate()
@@ -85,6 +85,7 @@ public class Model
         {
             _hookPoint = hit.point;
             _isGrapping = true;
+            _isHooked = false;
             _hook.parent = null;
             _hook.LookAt(_hookPoint);
             _controller.onFixedUpdate -= Move;
@@ -103,17 +104,26 @@ public class Model
             _player.position = Vector3.Lerp(_player.position, _hookPoint - _hand.localPosition, 5 * Time.fixedDeltaTime);
             if (Vector3.Distance(_player.position, _hookPoint - _hand.localPosition) < 0.5f)
             {
-                _controller.onFixedUpdate -= Grapping;
-                _controller.onFixedUpdate += Move;
                 _hook.parent = _hand;
                 _hook.localPosition = Vector3.zero;
                 _isGrapping = false;
-                _rb.useGravity = true;
-                _line.enabled = false;
+                _isHooked = true;
+                _controller.onFixedUpdate -= Grapping;
             }
         }
         _line.SetPosition(0, _hand.position);
         _line.SetPosition(1, _hookPoint);
+    }
+
+    public void StopHooking()
+    {
+        _controller.onFixedUpdate -= Grapping;
+        _controller.onFixedUpdate += Move;
+        _hook.parent = _hand;
+        _hook.localPosition = Vector3.zero;
+        _isGrapping = false;
+        _rb.useGravity = true;
+        _line.enabled = false;
     }
     
 }

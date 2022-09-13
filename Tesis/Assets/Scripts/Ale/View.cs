@@ -12,9 +12,8 @@ public class View
         _anim = animator;
     }
 
-    public void UpdateMove()
+    public void UpdateMove(Vector3 dir)
     {
-        Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
         _anim.SetFloat("MovX", dir.x);
         _anim.SetFloat("MovY", dir.z);
     }

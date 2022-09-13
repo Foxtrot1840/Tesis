@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using AmplifyShaderEditor;
 using Cinemachine;
 using UnityEngine;
 
@@ -12,7 +11,6 @@ public class Controller : MonoBehaviour
     [SerializeField] private float _speedAimRotation;
     [SerializeField] private float _speed = 5;
     [SerializeField] private float _speedRotation = 50;
-    [SerializeField] private float _speedAim = 50;
     [SerializeField] private float _jumpForce = 5;
     [SerializeField] private GameObject _bullet;
     [SerializeField] private GameObject _shootPoint;
@@ -27,7 +25,7 @@ public class Controller : MonoBehaviour
     private Rigidbody _rb;
     private Animator _anim;
     private Model _model;
-    private View _view;
+    public View _view;
 
     private bool _isZoom = false;
 
@@ -48,7 +46,6 @@ public class Controller : MonoBehaviour
     private void Start()
     {
         onFixedUpdate += _model.Move;
-        onFixedUpdate += _view.UpdateMove;
     }
 
     private void Update()
@@ -77,6 +74,11 @@ public class Controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && _isZoom)
         {
             _model.ShootHook();
+        }
+
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            _model.StopHooking();
         }
     }
 
