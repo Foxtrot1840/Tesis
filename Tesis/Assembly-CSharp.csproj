@@ -60,13 +60,13 @@
      <Compile Include="Assets\Scripts\Mati\SimpleMovement.cs" />
      <Compile Include="Assets\Scripts\Ale\Bullet.cs" />
      <Compile Include="Assets\Unity Demo\Scripts\SimpleCameraController.cs" />
+     <Compile Include="Assets\Visual Design Cafe\Nature Renderer\Runtime\NatureRenderer.SRP.cs" />
      <Compile Include="Assets\Scripts\Ale\Controller.cs" />
      <Compile Include="Assets\Scripts\Ale\Player.cs" />
      <Compile Include="Assets\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Scripts\CTI_Utils.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Scripts\Mati\MaterialSwapper.cs" />
      <Compile Include="Assets\Scripts\Ale\Model.cs" />
-     <Compile Include="Assets\Visual Design Cafe\Nature Renderer\Runtime\NatureRenderer.SRP.cs" />
      <None Include="Assets\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Bark_Array_301.shader" />
      <None Include="Assets\TerrainSampleAssets\ThirdPartyNotices.txt" />
      <None Include="Assets\Visual Design Cafe\ShaderX\Templates\Common\Platforms\GLES3.hlsl" />
@@ -318,8 +318,14 @@
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <Reference Include="VisualDesignCafe.Threading">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Renderer/Plugins/VisualDesignCafe.Threading.dll</HintPath>
+ </Reference>
+ <Reference Include="VisualDesignCafe.Rendering.Nature">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Renderer/Plugins/VisualDesignCafe.Rendering.Nature.dll</HintPath>
+ </Reference>
+ <Reference Include="VisualDesignCafe.Rendering">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Renderer/Plugins/VisualDesignCafe.Rendering.dll</HintPath>
  </Reference>
  <Reference Include="VisualDesignCafe.Packages">
  <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Package Manager/VisualDesignCafe.Packages.dll</HintPath>
@@ -327,47 +333,41 @@
  <Reference Include="VisualDesignCafe.Editor.Events">
  <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Package Manager/VisualDesignCafe.Editor.Events.dll</HintPath>
  </Reference>
- <Reference Include="VisualDesignCafe.Editor.PackageManager">
- <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Package Manager/VisualDesignCafe.Editor.PackageManager.dll</HintPath>
- </Reference>
- <Reference Include="VisualDesignCafe.Editor.Community">
- <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Package Manager/VisualDesignCafe.Editor.Community.dll</HintPath>
- </Reference>
- <Reference Include="VisualDesignCafe.Editor.Web">
- <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Package Manager/VisualDesignCafe.Editor.Web.dll</HintPath>
+ <Reference Include="VisualDesignCafe.ShaderX">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/ShaderX/Plugins/VisualDesignCafe.ShaderX.dll</HintPath>
  </Reference>
  <Reference Include="VisualDesignCafe.Nature">
  <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Shaders/Plugins/VisualDesignCafe.Nature.dll</HintPath>
  </Reference>
- <Reference Include="VisualDesignCafe.ShaderX">
- <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/ShaderX/Plugins/VisualDesignCafe.ShaderX.dll</HintPath>
+ <Reference Include="VisualDesignCafe.Memory">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Renderer/Plugins/VisualDesignCafe.Memory.dll</HintPath>
+ </Reference>
+ <Reference Include="VisualDesignCafe.Editor.PackageManager">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Package Manager/VisualDesignCafe.Editor.PackageManager.dll</HintPath>
  </Reference>
  <Reference Include="VisualDesignCafe.ShaderX.Editor">
  <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/ShaderX/Plugins/VisualDesignCafe.ShaderX.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="VisualDesignCafe.Pooling">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Renderer/Plugins/VisualDesignCafe.Pooling.dll</HintPath>
+ </Reference>
+ <Reference Include="VisualDesignCafe.Editor.Community">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Package Manager/VisualDesignCafe.Editor.Community.dll</HintPath>
+ </Reference>
  <Reference Include="VisualDesignCafe.Editor.ShaderX">
  <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/ShaderX/Plugins/VisualDesignCafe.Editor.ShaderX.dll</HintPath>
  </Reference>
- <Reference Include="VisualDesignCafe.Nature.Editor">
- <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Shaders/Plugins/VisualDesignCafe.Nature.Editor.dll</HintPath>
- </Reference>
- <Reference Include="VisualDesignCafe.Threading">
- <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Renderer/Plugins/VisualDesignCafe.Threading.dll</HintPath>
- </Reference>
- <Reference Include="VisualDesignCafe.Rendering.Nature">
- <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Renderer/Plugins/VisualDesignCafe.Rendering.Nature.dll</HintPath>
- </Reference>
- <Reference Include="VisualDesignCafe.Memory">
- <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Renderer/Plugins/VisualDesignCafe.Memory.dll</HintPath>
- </Reference>
- <Reference Include="VisualDesignCafe.Pooling">
- <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Renderer/Plugins/VisualDesignCafe.Pooling.dll</HintPath>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="VisualDesignCafe.Rendering.Nature.Editor">
  <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Renderer/Plugins/VisualDesignCafe.Rendering.Nature.Editor.dll</HintPath>
  </Reference>
- <Reference Include="VisualDesignCafe.Rendering">
- <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Renderer/Plugins/VisualDesignCafe.Rendering.dll</HintPath>
+ <Reference Include="VisualDesignCafe.Nature.Editor">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Nature Shaders/Plugins/VisualDesignCafe.Nature.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="VisualDesignCafe.Editor.Web">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Tesis/Assets/Visual Design Cafe/Package Manager/VisualDesignCafe.Editor.Web.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

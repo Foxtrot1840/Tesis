@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public CinemachineVirtualCamera _zoomCamera;
     [SerializeField] private float _speedAimRotation;
     [SerializeField] private float _speed = 5;
+    [SerializeField] private float _sprint = 10;
     [SerializeField] private float _speedRotation = 50;
     [SerializeField] private float _jumpForce = 5;
     [SerializeField] private GameObject _bullet;
@@ -73,7 +74,7 @@ public class Player : MonoBehaviour
         _anim.SetFloat("MovX", dir.x);
         _anim.SetFloat("MovY", dir.z);
         
-        _rb.MovePosition(transform.position + Vector3.Normalize(transform.right * dir.x + transform.forward * dir.z) * _speed * Time.fixedDeltaTime);
+        _rb.MovePosition(transform.position + Vector3.Normalize(transform.right * dir.x + transform.forward * dir.z) * (Input.GetKey(KeyCode.LeftShift) ? _sprint : _speed) * Time.fixedDeltaTime);
         
         //Rotacion en z dependiendo la posicion del mouse
         _rb.MoveRotation(_rb.rotation * Quaternion.Euler(Vector3.up * Input.GetAxis("Mouse X") * _speedRotation));
