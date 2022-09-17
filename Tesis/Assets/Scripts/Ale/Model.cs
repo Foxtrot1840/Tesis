@@ -53,11 +53,13 @@ public class Model
         _controller._view.UpdateMove(dir);
     }
 
+    //Rotacion del personaje en el eje Y
     public void Rotate()
     {
         _rb.MoveRotation(_rb.rotation * Quaternion.Euler(Vector3.up * Input.GetAxis("Mouse X") * _speedRotation * Time.deltaTime));
     }
 
+    //Movimiento vertical de la camara
     public void CameraAim()
     {
         Vector3  rotation = Vector3.up * -Input.GetAxis("Mouse Y") * Time.deltaTime * _speedAim;
@@ -79,6 +81,7 @@ public class Model
         return Physics.Raycast(_player.position + _player.up * 0.5f, _player.up * -1, 0.6f);
     }
 
+    //Calcula hacia donde va el gancho y deactiva funciones del Player
     public void ShootHook()
     {
         if (_isGrapping) return;
@@ -97,6 +100,7 @@ public class Model
         }
     }
 
+    //Mueve el Gancho y cuando llega mueve al Player
     public void Grapping()
     {
         Debug.Log("Grapping");
@@ -116,7 +120,8 @@ public class Model
         _line.SetPosition(0, _hand.position);
         _line.SetPosition(1, _hookPoint);
     }
-
+    
+    //Activa los movimietos del Player despues del Hook
     public void StopHooking()
     {
         _controller.onFixedUpdate -= Grapping;

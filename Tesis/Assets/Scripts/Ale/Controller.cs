@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-public class Controller : MonoBehaviour
+public class Controller : Entity
 {
     [SerializeField] private CinemachineVirtualCamera _normalCamera;
     [SerializeField] private CinemachineVirtualCamera _zoomCamera;
@@ -54,6 +54,7 @@ public class Controller : MonoBehaviour
         _model.Rotate();
         _model.CameraAim();
 
+        //Con click derecho se invierte el Zoom
         if (Input.GetMouseButtonDown(1))
         {
             _isZoom = !_isZoom;
@@ -61,6 +62,8 @@ public class Controller : MonoBehaviour
             _anim.SetBool("Zoom",_isZoom);
         }
 
+        //El click izquierdo se realiza la animacion de ataque
+        ////(el animator pregunta si se apunta se hace un disparo, sino se usa la espada) 
         if (Input.GetMouseButtonDown(0))
         {
             _view.Attack();
@@ -72,7 +75,7 @@ public class Controller : MonoBehaviour
             _model.Jump();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && _isZoom)
+        if (Input.GetKeyDown(KeyCode.E))
         {
             _model.ShootHook();
         }
