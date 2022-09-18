@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Controller : Entity
 {
+    [SerializeField] private int _maxHealth;
     [SerializeField] private CinemachineVirtualCamera _normalCamera;
     [SerializeField] private CinemachineVirtualCamera _zoomCamera;
     [SerializeField] private float _speedAimRotation;
@@ -46,6 +47,7 @@ public class Controller : Entity
 
     private void Start()
     {
+        currentHealth = _maxHealth;
         onFixedUpdate += _model.Move;
     }
 
