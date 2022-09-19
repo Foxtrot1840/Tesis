@@ -1576,15 +1576,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa18f73ded517b34eb715c4bc5d8f632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHealth: 5
   _normalCamera: {fileID: 0}
   _zoomCamera: {fileID: 0}
   _speedAimRotation: 5
-  _speed: 5
-  _sprint: 10
+  _speed: 4
+  _sprint: 6
   _speedRotation: 450
   _jumpForce: 250
   _bullet: {fileID: 1958266611578833855, guid: 0edd8069e21c69b4584b2a014e6a3df8, type: 3}
-  _shootPoint: {fileID: 1958266611578833855, guid: 0edd8069e21c69b4584b2a014e6a3df8, type: 3}
+  _shootPoint: {fileID: 7967599053708788361}
   _canvas: {fileID: 0}
   _hook: {fileID: 728346859126098592}
   _hand: {fileID: 5947166772385861696}
@@ -2864,6 +2865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+  _destroyObject: 0
 --- !u!1001 &7930945910286421734
 PrefabInstance:
   m_ObjectHideFlags: 0

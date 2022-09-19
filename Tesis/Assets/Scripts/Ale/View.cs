@@ -25,6 +25,12 @@ public class View
 
     public void Attack()
     {
+        _anim.speed = 1;
         _anim.SetTrigger("Attack");
+    }
+
+    public void SetAnimationSpeed(float speed)
+    {
+        _anim.speed = speed;
     }
 }

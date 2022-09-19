@@ -13,8 +13,16 @@ public class CanvasManager : MonoBehaviour
         EventManager.Subscribe(EventManager.EventsType.Event_FinishGame,FinishLevel);
     }
 
+    private void Start()
+    {
+        _victoryScreen.SetActive(false);
+        _defeatScreen.SetActive(false);
+    }
+
     private void FinishLevel(params object[] p)
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Time.timeScale = 0;
         _victoryScreen.SetActive((bool)p[0]);
         _defeatScreen.SetActive(!(bool)p[0]);

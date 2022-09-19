@@ -15,7 +15,7 @@ public abstract class Entity : MonoBehaviour, IDamagable
         }
     }
 
-    public void Die()
+    public  virtual void Die()
     {
         Destroy(this.gameObject);
     }

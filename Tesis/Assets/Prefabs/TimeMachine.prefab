@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4227823181181640616}
   - component: {fileID: 266644491177297000}
+  - component: {fileID: -7878248311591934925}
   m_Layer: 0
   m_Name: TimeMachine
   m_TagString: Untagged
@@ -48,6 +49,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9285898, y: 1.6933028, z: 1.9610912}
   m_Center: {x: 0.0361526, y: 0.025693, z: 0.071640074}
+--- !u!114 &-7878248311591934925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3596104941242811666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5767aa95ab957d45ad317f39f8e7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3920949358619110327
 GameObject:
   m_ObjectHideFlags: 0

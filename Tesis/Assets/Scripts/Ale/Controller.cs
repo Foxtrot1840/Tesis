@@ -39,16 +39,18 @@ public class Controller : Entity
         _zoomCameraAim = _zoomCamera.GetCinemachineComponent<CinemachineTransposer>();
         _rb = GetComponent<Rigidbody>();
         _anim = GetComponent<Animator>();
-        _model = new Model(this, _rb, this.transform, _speed, _sprint, _speedRotation, _speedAimRotation, _jumpForce, _normalCameraAim,
+        _model = new Model(this, _rb, this.transform, _speedRotation, _speedAimRotation, _jumpForce, _normalCameraAim,
                            _zoomCameraAim, _hand, _hook, _hookDistance, _line);
         _view = new View(_anim);
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Start()
     {
         currentHealth = _maxHealth;
         onFixedUpdate += _model.Move;
+        _model.SetSpeed(_speed);
     }
 
     private void Update()
@@ -73,6 +75,7 @@ public class Controller : Entity
         
         if (Input.GetButtonDown("Jump") && _model.IsGrounded())
         {
+            Sprint(false);
             _view.Jump();
             _model.Jump();
         }
@@ -86,6 +89,10 @@ public class Controller : Entity
         {
             _model.StopHooking();
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))Sprint(true);
+
+        if (Input.GetKeyUp(KeyCode.LeftShift)) Sprint(false);
     }
 
     private void FixedUpdate()
@@ -97,9 +104,28 @@ public class Controller : Entity
     {
         Instantiate(_bullet, _shootPoint.transform.position, Quaternion.Euler(_zoomCamera.transform.rotation.eulerAngles + new Vector3(-1,3.5f,0)));
     }
+
+    public void Sprint(bool active)
+    {
+        if (active)
+        {
+            _model.SetSpeed(_sprint);
+            _view.SetAnimationSpeed(1.4f);
+        }
+        else
+        {
+            _model.SetSpeed(_speed);
+            _view.SetAnimationSpeed(1f);
+        }
+    }
     
     public void ResetJump()
     {
         _anim.ResetTrigger("Jump");
+    }
+
+    public override void Die()
+    {
+        EventManager.TriggerEvent(EventManager.EventsType.Event_FinishGame, false);
     }
 }

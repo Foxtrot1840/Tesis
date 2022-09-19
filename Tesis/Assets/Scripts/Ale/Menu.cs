@@ -8,10 +8,12 @@ public class Menu : MonoBehaviour
     public void ChangeScene(string nextScene)
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
+        Debug.Log("menu");
     }
     
     public void Restart()
     {
+        Debug.Log("Restart");
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene()
             .buildIndex);
     }

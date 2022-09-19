@@ -10,8 +10,6 @@ public class Model
 {
     private Rigidbody _rb;
     private Transform _player;
-    private float _speed;
-    private float _sprint;
     private float _speedRotation;
     private float _speedAim;
     private float _jumpForce;
@@ -22,19 +20,18 @@ public class Model
     private float _maxDistanceHook;
     private Controller _controller;
     private LineRenderer _line;
-
+    private float _currentSpeed;
+    
     private bool _isGrapping, _isHooked;
     private Vector3 _hookPoint;
 
-    public Model(Controller controller, Rigidbody rb, Transform player, float speed, float sprint, float speedRotation,
+    public Model(Controller controller, Rigidbody rb, Transform player, float speedRotation,
         float speedAim, float jumpForce, CinemachineTransposer normal, CinemachineTransposer zoom, Transform hand,
         Transform hook, float hookDistance, LineRenderer line)
     {
         _controller = controller;
         _rb = rb;
         _player = player;
-        _speed = speed;
-        _sprint = sprint;
         _speedRotation = speedRotation;
         _speedAim = speedAim;
         _normalCameraOffset = normal;
@@ -49,10 +46,15 @@ public class Model
     public void Move()
     {
         Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
-        _rb.MovePosition(_player.transform.position + Vector3.Normalize(_player.transform.right * dir.x + _player.transform.forward * dir.z) * (Input.GetKey(KeyCode.LeftShift) ? _sprint : _speed) * Time.fixedDeltaTime);
+        _rb.MovePosition(_player.transform.position + Vector3.Normalize(_player.transform.right * dir.x + _player.transform.forward * dir.z) * _currentSpeed * Time.fixedDeltaTime);
         _controller._view.UpdateMove(dir);
     }
 
+    public void SetSpeed(float speed)
+    {
+        _currentSpeed = speed;
+    }
+    
     //Rotacion del personaje en el eje Y
     public void Rotate()
     {
