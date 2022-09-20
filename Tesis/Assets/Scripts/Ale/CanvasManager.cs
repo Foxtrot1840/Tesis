@@ -23,7 +23,6 @@ public class CanvasManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        Time.timeScale = 0;
         _victoryScreen.SetActive((bool)p[0]);
         _defeatScreen.SetActive(!(bool)p[0]);
     }

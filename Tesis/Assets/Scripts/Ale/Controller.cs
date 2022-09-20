@@ -16,7 +16,6 @@ public class Controller : MonoBehaviour //Entity
     [SerializeField] private float _jumpForce = 5;
     [SerializeField] private GameObject _bullet;
     [SerializeField] private GameObject _shootPoint;
-    [SerializeField] private GameObject _canvas;
     [SerializeField] private Transform _hook;
     [SerializeField] private Transform _hand;
     [SerializeField] private float _hookDistance;
@@ -49,8 +48,8 @@ public class Controller : MonoBehaviour //Entity
     private void Start()
     {
         //currentHealth = _maxHealth;
-      //  onFixedUpdate += _model.Move;
-      //  _model.SetSpeed(_speed);
+        onFixedUpdate += _model.Move;
+        _model.SetSpeed(_speed);
     }
 
     private void Update()
@@ -62,7 +61,6 @@ public class Controller : MonoBehaviour //Entity
         if (Input.GetMouseButtonDown(1))
         {
             _isZoom = !_isZoom;
-            _canvas.SetActive(_isZoom);
             _anim.SetBool("Zoom",_isZoom);
         }
 

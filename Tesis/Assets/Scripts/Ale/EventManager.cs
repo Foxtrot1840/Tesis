@@ -55,6 +55,12 @@ public class EventManager
     {
         TriggerEvent(eventType, null);
     }
+    
+    public static void ClearEvents()
+    {
+        if (_dictionaryEvents != null)
+            _dictionaryEvents.Clear();
+    }
 
     public enum EventsType
     {

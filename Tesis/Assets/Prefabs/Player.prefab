@@ -1586,10 +1586,9 @@ MonoBehaviour:
   _jumpForce: 250
   _bullet: {fileID: 1958266611578833855, guid: 0edd8069e21c69b4584b2a014e6a3df8, type: 3}
   _shootPoint: {fileID: 7967599053708788361}
-  _canvas: {fileID: 0}
   _hook: {fileID: 728346859126098592}
   _hand: {fileID: 5947166772385861696}
-  _hookDistance: 50
+  _hookDistance: 75
   _line: {fileID: 94658264285565028}
 --- !u!1 &5269803214590602702
 GameObject:
@@ -2864,7 +2863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a75a5e080f17a4bbdaf39d153f0974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 1
   _destroyObject: 0
 --- !u!1001 &7930945910286421734
 PrefabInstance:

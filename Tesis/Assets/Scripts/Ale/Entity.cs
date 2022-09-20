@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Entity : MonoBehaviour, IDamagable
 {
-    protected int currentHealth;
+    public int currentHealth;
 
     public void GetDamage(int damage)
     {

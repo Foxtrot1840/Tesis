@@ -88,7 +88,7 @@ public class Model
     {
         if (_isGrapping) return;
 
-        if (Physics.Raycast(_hand.position, Camera.main.transform.forward, out RaycastHit hit, _maxDistanceHook))
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, _maxDistanceHook))
         {
             _hookPoint = hit.point;
             _isGrapping = true;
