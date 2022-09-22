@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-public class Controller : MonoBehaviour //Entity
+public class Controller : Entity
 {
     [SerializeField] private int _maxHealth;
     [SerializeField] private CinemachineVirtualCamera _normalCamera;
@@ -47,7 +47,7 @@ public class Controller : MonoBehaviour //Entity
 
     private void Start()
     {
-        //currentHealth = _maxHealth;
+        currentHealth = _maxHealth;
         onFixedUpdate += _model.Move;
         _model.SetSpeed(_speed);
     }
@@ -122,8 +122,8 @@ public class Controller : MonoBehaviour //Entity
         _anim.ResetTrigger("Jump");
     }
 
-   // public override void Die()
-  //  {
-   //     EventManager.TriggerEvent(EventManager.EventsType.Event_FinishGame, false);
-   // }
+    public override void Die()
+    {
+        EventManager.TriggerEvent(EventManager.EventsType.Event_FinishGame, false);
+   }
 }

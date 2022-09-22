@@ -120,7 +120,7 @@ public class Model
             }
         }
         _line.SetPosition(0, _hand.position);
-        _line.SetPosition(1, _hookPoint);
+        _line.SetPosition(1, _hook.position);
     }
     
     //Activa los movimietos del Player despues del Hook

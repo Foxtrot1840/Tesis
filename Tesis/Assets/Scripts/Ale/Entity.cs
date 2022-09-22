@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Entity : MonoBehaviour, IDamagable
 {
-    public int currentHealth;
+    protected int currentHealth;
 
     public void GetDamage(int damage)
     {
@@ -15,7 +15,7 @@ public abstract class Entity : MonoBehaviour, IDamagable
         }
     }
 
-    public  virtual void Die()
+    public virtual void Die()
     {
         Destroy(this.gameObject);
     }
