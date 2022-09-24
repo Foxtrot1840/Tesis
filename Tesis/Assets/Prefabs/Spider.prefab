@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8316272391632993648}
   - component: {fileID: 6040291816922096485}
   - component: {fileID: 7203588519623923140}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 919132148705010503}
   - component: {fileID: 7965847922115134182}
   - component: {fileID: 919132148705010505}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,10 +173,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4309859850662032359, guid: b33e90b8f32f96745b78fe3493d8d7a9, type: 3}
-  - {fileID: -4590822995198620427, guid: b33e90b8f32f96745b78fe3493d8d7a9, type: 3}
-  - {fileID: 4474963045291213512, guid: b33e90b8f32f96745b78fe3493d8d7a9, type: 3}
-  - {fileID: -7975534001656084579, guid: b33e90b8f32f96745b78fe3493d8d7a9, type: 3}
+  - {fileID: 2100000, guid: a9785a9979444a04c846f1dd9c7af783, type: 2}
+  - {fileID: 2100000, guid: 98adcc43d4627e64b8dce50e5ba37f9e, type: 2}
+  - {fileID: 2100000, guid: bee16147cc77a994fb44a1a83a65f7b4, type: 2}
+  - {fileID: 2100000, guid: a2a3c772221af5e44bb7b2aa705a76ec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
