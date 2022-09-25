@@ -30,7 +30,7 @@ public class Controller : Entity
 
     private bool _isZoom = false;
 
-    public event Action onFixedUpdate = delegate{ };
+    public Action onFixedUpdate = delegate{ };
 
     private void Awake()
     {
@@ -90,7 +90,7 @@ public class Controller : Entity
 
         if (Input.GetKeyDown(KeyCode.LeftShift))Sprint(true);
 
-        if (Input.GetKeyUp(KeyCode.LeftShift)) Sprint(false);
+        if (Input.GetKeyUp(KeyCode.LeftShift)) Sprint(false); 
     }
 
     private void FixedUpdate()
@@ -108,13 +108,12 @@ public class Controller : Entity
         if (active)
         {
             _model.SetSpeed(_sprint);
-            _view.SetAnimationSpeed(1.4f);
         }
         else
         {
             _model.SetSpeed(_speed);
-            _view.SetAnimationSpeed(1f);
         }
+        _view.Sprint(active);
     }
     
     public void ResetJump()

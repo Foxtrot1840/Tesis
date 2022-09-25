@@ -96,7 +96,7 @@ public class Model
             _hook.parent = null;
             _hook.LookAt(_hookPoint);
             _controller.onFixedUpdate -= Move;
-            _controller.onFixedUpdate += Grapping;
+            _controller.onFixedUpdate = Grapping;
             _rb.useGravity = false;
             _line.enabled = true;
         }
@@ -105,7 +105,6 @@ public class Model
     //Mueve el Gancho y cuando llega mueve al Player
     public void Grapping()
     {
-        Debug.Log("Grapping");
         _hook.position = Vector3.Lerp(_hook.position, _hookPoint, 5 * Time.fixedDeltaTime);
         if (Vector3.Distance(_hook.position, _hookPoint) < 0.5f)
         {
@@ -126,7 +125,6 @@ public class Model
     //Activa los movimietos del Player despues del Hook
     public void StopHooking()
     {
-        _controller.onFixedUpdate -= Grapping;
         _controller.onFixedUpdate += Move;
         _hook.parent = _hand;
         _hook.localPosition = Vector3.zero;

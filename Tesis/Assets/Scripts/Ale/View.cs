@@ -29,8 +29,8 @@ public class View
         _anim.SetTrigger("Attack");
     }
 
-    public void SetAnimationSpeed(float speed)
+    public void Sprint(bool sprint)
     {
-        _anim.speed = speed;
+        _anim.SetBool("Sprint",sprint);
     }
 }
