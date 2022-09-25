@@ -9,8 +9,10 @@ public class Spider : Entity
 {
     private NavMeshAgent _navMesh;
     private Transform _player;
-    private Renderer _renderer;
-    [SerializeField] private float _range;
+    private Renderer _renderer; 
+    
+    public float _range;
+        
     [SerializeField] private float _rangeAttack;
     [SerializeField] private int _maxHealth;
     [SerializeField] private float cooldown;

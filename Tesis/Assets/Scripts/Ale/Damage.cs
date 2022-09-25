@@ -21,6 +21,6 @@ public class Damage : MonoBehaviour
         IDamagable damagable = other.gameObject.GetComponent<IDamagable>();
         if (damagable == null) return;
         damagable.GetDamage(damage);
-        if(_destroyObject) DestroyImmediate(gameObject);
+        if(_destroyObject) Destroy(gameObject);
     }
 }
