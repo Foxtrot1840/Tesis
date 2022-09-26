@@ -9,12 +9,7 @@ public class Guns : MonoBehaviour
     
     float range = 100;
 
-    private void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (!Input.GetKeyDown(KeyCode.Mouse0)) return;
