@@ -16,7 +16,7 @@ public class Spider : Entity
     [SerializeField] private float _rangeAttack;
     [SerializeField] private int _maxHealth;
     [SerializeField] private float cooldown;
-    [SerializeField] private GameObject _cubeAttack;
+    [SerializeField] private int damage;
 
     private bool _isAttack;
     
@@ -47,10 +47,13 @@ public class Spider : Entity
     
     IEnumerator Attack()
     {
-        _cubeAttack.SetActive(true);
         _renderer.material.color = Color.red;
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, _rangeAttack))
+        {
+            IDamagable dmg = hit.collider.GetComponent<IDamagable>();
+            if(dmg != null) dmg.GetDamage(damage);
+        }
         yield return new WaitForSeconds(.1f);
-        _cubeAttack.SetActive(false);
         _renderer.material.color = Color.white;
         yield return new WaitForSeconds(cooldown);
         _isAttack = false;
@@ -62,5 +65,11 @@ public class Spider : Entity
         Gizmos.DrawWireSphere(transform.position, _range);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _rangeAttack);
+    }
+
+    public override void GetDamage(int damage)
+    {
+        SoundManager.instance.Play(SoundID.Spider);
+        base.GetDamage(damage);
     }
 }

@@ -32,4 +32,9 @@ public class View
     {
         _anim.SetBool("Sprint",sprint);
     }
+
+    public void Hit()
+    {
+        _anim.SetTrigger("GetDamage");
+    }
 }

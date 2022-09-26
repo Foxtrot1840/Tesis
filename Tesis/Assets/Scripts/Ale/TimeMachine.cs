@@ -9,7 +9,6 @@ public class TimeMachine : MonoBehaviour
     private void Start()
     {
         _player = GameManager.instance.player;
-        Debug.Log("Lo encontro" + _player);
     }
 
     private void OnCollisionEnter(Collision collision)

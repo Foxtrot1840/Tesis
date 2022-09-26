@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Controller : Entity
 {
@@ -119,6 +120,17 @@ public class Controller : Entity
     public void ResetJump()
     {
         _anim.ResetTrigger("Jump");
+    }
+
+    public override void GetDamage(int damage)
+    {
+        currentHealth -= damage;
+        _view.Hit();
+        EventManager.TriggerEvent(EventManager.EventsType.Event_GetDamage, currentHealth, _maxHealth);
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
 
     public override void Die()

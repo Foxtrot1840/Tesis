@@ -6,7 +6,7 @@ public abstract class Entity : MonoBehaviour, IDamagable
 {
     protected int currentHealth;
 
-    public void GetDamage(int damage)
+    public virtual void GetDamage(int damage)
     {
         currentHealth -= damage;
         if (currentHealth <= 0)

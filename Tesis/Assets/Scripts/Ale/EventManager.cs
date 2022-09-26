@@ -64,6 +64,7 @@ public class EventManager
 
     public enum EventsType
     {
-        Event_FinishGame
+        Event_FinishGame,
+        Event_GetDamage
     }
 }
