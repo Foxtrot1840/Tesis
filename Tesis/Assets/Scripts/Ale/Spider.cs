@@ -30,7 +30,7 @@ public class Spider : Entity
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position,_player.position)<_rangeAttack)
+        if (Vector3.Distance(transform.position,_player.position) < _rangeAttack)
         {
             _navMesh.destination = transform.position;
             if (!_isAttack)
