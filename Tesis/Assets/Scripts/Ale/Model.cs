@@ -95,7 +95,6 @@ public class Model
             _isHooked = false;
             _hook.parent = null;
             _hook.LookAt(_hookPoint);
-            _controller.onFixedUpdate -= Move;
             _controller.onFixedUpdate = Grapping;
             _rb.useGravity = false;
             _line.enabled = true;
@@ -115,7 +114,7 @@ public class Model
                 _hook.localPosition = Vector3.zero;
                 _isGrapping = false;
                 _isHooked = true;
-                _controller.onFixedUpdate -= Grapping;
+                _controller.onFixedUpdate = Move;
             }
         }
         _line.SetPosition(0, _hand.position);
@@ -125,12 +124,11 @@ public class Model
     //Activa los movimietos del Player despues del Hook
     public void StopHooking()
     {
-        _controller.onFixedUpdate += Move;
+        _controller.onFixedUpdate = Move;
         _hook.parent = _hand;
         _hook.localPosition = Vector3.zero;
         _isGrapping = false;
         _rb.useGravity = true;
         _line.enabled = false;
     }
-    
 }

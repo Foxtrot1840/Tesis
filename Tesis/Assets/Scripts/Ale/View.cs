@@ -25,7 +25,6 @@ public class View
 
     public void Attack()
     {
-        _anim.speed = 1;
         _anim.SetTrigger("Attack");
     }
 
