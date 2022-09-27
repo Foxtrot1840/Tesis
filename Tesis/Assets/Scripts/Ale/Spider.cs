@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -38,6 +39,14 @@ public class Spider : Entity
                 _isAttack = true;
                 StartCoroutine(Attack());
             }
+
+            if (!Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, _rangeAttack))
+            {
+                Debug.Log("Rote");
+                    Quaternion rotation = Quaternion.LookRotation(_player.position - transform.position);
+                    transform.rotation = Quaternion.Lerp(transform.rotation, rotation, 5 * Time.deltaTime);
+                    transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+            }
         }
         else if (Vector3.Distance(transform.position,_player.position) < _range)
         {
@@ -48,12 +57,12 @@ public class Spider : Entity
     IEnumerator Attack()
     {
         _renderer.material.color = Color.red;
+        yield return new WaitForSeconds(.2f);
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, _rangeAttack))
         {
             IDamagable dmg = hit.collider.GetComponent<IDamagable>();
             if(dmg != null) dmg.GetDamage(damage);
         }
-        yield return new WaitForSeconds(.1f);
         _renderer.material.color = Color.white;
         yield return new WaitForSeconds(cooldown);
         _isAttack = false;
