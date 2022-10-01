@@ -22,7 +22,7 @@ public class Model
     private LineRenderer _line;
     private float _currentSpeed;
     
-    private bool _isGrapping, _isHooked;
+    private bool _isGrapping, _going;
     private Vector3 _hookPoint;
 
     public Model(Controller controller, Rigidbody rb, Transform player, float speedRotation,
@@ -92,12 +92,22 @@ public class Model
         {
             _hookPoint = hit.point;
             _isGrapping = true;
-            _isHooked = false;
             _hook.parent = null;
             _hook.LookAt(_hookPoint);
             _controller.onFixedUpdate = Grapping;
             _rb.useGravity = false;
             _line.enabled = true;
+        }
+        else
+        {
+            _hookPoint = Camera.main.transform.position + Camera.main.transform.forward * _maxDistanceHook;
+            Debug.DrawLine(Camera.main.transform.position, _hookPoint, Color.magenta,5);
+            _hook.parent = null;
+            _hook.LookAt(_hookPoint);
+            _controller.onFixedUpdate += FailHook;
+            _line.enabled = true;
+            _isGrapping = true;
+            _going = true;
         }
     }
 
@@ -113,9 +123,27 @@ public class Model
                 _hook.parent = _hand;
                 _hook.localPosition = Vector3.zero;
                 _isGrapping = false;
-                _isHooked = true;
                 _controller.onFixedUpdate = Move;
             }
+        }
+        _line.SetPosition(0, _hand.position);
+        _line.SetPosition(1, _hook.position);
+    }
+
+    public void FailHook()
+    {
+        _hook.position = Vector3.Lerp(_hook.position, _hookPoint, 5 * Time.fixedDeltaTime);
+        if (Vector3.Distance(_hook.position, _hookPoint) < 0.5f)
+        {
+            if (!_going)
+            {
+                _hook.parent = _hand;
+                _hook.localPosition = Vector3.zero;
+                _controller.onFixedUpdate -= FailHook;
+                _isGrapping = false;
+            }
+            _going = false;
+            _hookPoint = _hand.position;
         }
         _line.SetPosition(0, _hand.position);
         _line.SetPosition(1, _hook.position);

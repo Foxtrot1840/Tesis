@@ -15,11 +15,11 @@ C:/Users/Usuario/Desktop/Tesis/Tesis
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58062
+60280
 Successfully changed project path to: C:/Users/Usuario/Desktop/Tesis/Tesis
 C:/Users/Usuario/Desktop/Tesis/Tesis
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 69.76 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 65.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.25f1 (9b9180224418)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
@@ -35,37 +35,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56080
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56668
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001527 seconds.
+Registered in 0.001427 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 69.99 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 69.07 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.521 seconds
+- Completed reload, in  0.504 seconds
 Domain Reload Profiling:
-	ReloadAssembly (521ms)
-		BeginReloadAssembly (43ms)
+	ReloadAssembly (504ms)
+		BeginReloadAssembly (41ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (418ms)
-			LoadAssemblies (42ms)
+		EndReloadAssembly (406ms)
+			LoadAssemblies (39ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (131ms)
+			SetupTypeCache (120ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (179ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (181ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (70ms)
+				RefreshPlugins (69ms)
 				BeforeProcessingInitializeOnLoad (14ms)
-				ProcessInitializeOnLoadAttributes (67ms)
+				ProcessInitializeOnLoadAttributes (71ms)
 				ProcessInitializeOnLoadMethodAttributes (23ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -73,51 +73,51 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003835 seconds.
+Registered in 0.003842 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 84.65 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 68.09 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.349 seconds
+- Completed reload, in  1.297 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1350ms)
-		BeginReloadAssembly (113ms)
+	ReloadAssembly (1298ms)
+		BeginReloadAssembly (112ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (1185ms)
-			LoadAssemblies (79ms)
+			CreateAndSetChildDomain (14ms)
+		EndReloadAssembly (1137ms)
+			LoadAssemblies (72ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (288ms)
+			SetupTypeCache (292ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (68ms)
-			SetupLoadedEditorAssemblies (646ms)
+			RebuildScriptCaches (67ms)
+			SetupLoadedEditorAssemblies (602ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (85ms)
-				BeforeProcessingInitializeOnLoad (86ms)
-				ProcessInitializeOnLoadAttributes (459ms)
+				RefreshPlugins (68ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (435ms)
 				ProcessInitializeOnLoadMethodAttributes (8ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3863 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 221.2 MB.
-System memory in use after: 221.3 MB.
+System memory in use before: 221.4 MB.
+System memory in use after: 221.6 MB.
 
 Unloading 32 unused Assets to reduce memory usage. Loaded Objects now: 4315.
-Total: 3.091600 ms (FindLiveObjects: 0.258000 ms CreateObjectMapping: 0.179100 ms MarkObjects: 2.555300 ms  DeleteObjects: 0.098300 ms)
+Total: 2.849500 ms (FindLiveObjects: 0.225100 ms CreateObjectMapping: 0.142500 ms MarkObjects: 2.391600 ms  DeleteObjects: 0.089800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,291 +131,393 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/TerrainData_afd6165e-3795-4f97-b78a-c1d273663e98.asset
-  artifactKey: Guid(481e197ab4d97ca48b17610d8c33f24f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TerrainData_afd6165e-3795-4f97-b78a-c1d273663e98.asset using Guid(481e197ab4d97ca48b17610d8c33f24f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '307b2d7642210ea79abccb4f1106dd27') in 0.061327 seconds 
-  Import took 0.066188 seconds .
+  path: Assets/Building/Casita3/New Material.mat
+  artifactKey: Guid(3c38f7be8b2934546a8d2ee079c79705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/New Material.mat using Guid(3c38f7be8b2934546a8d2ee079c79705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '137591c83fe27a11850d931af8b1e5ef') in 0.182219 seconds 
+  Import took 0.187009 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000129 seconds.
-  path: Assets/TerrainData_bd47f991-d757-4326-924a-4e958f2c1e90.asset
-  artifactKey: Guid(145837d477cc724439825bd90a052246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TerrainData_bd47f991-d757-4326-924a-4e958f2c1e90.asset using Guid(145837d477cc724439825bd90a052246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5362c157d6f99e1ee403d2c13347107') in 0.029022 seconds 
-  Import took 0.033492 seconds .
+  Time since last request: 413.165409 seconds.
+  path: Assets/Building/Casita3/Casita3_Default_Material_AlbedoTransparency.png
+  artifactKey: Guid(21c1cd7a81726a94fa0a38b7cc7caf1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Default_Material_AlbedoTransparency.png using Guid(21c1cd7a81726a94fa0a38b7cc7caf1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0532a975ae1b198faa5d53d181598e76') in 0.052090 seconds 
+  Import took 0.058785 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/New Terrain 2.asset
-  artifactKey: Guid(84a45a9d435ed1248b843a38fe08ef81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/New Terrain 2.asset using Guid(84a45a9d435ed1248b843a38fe08ef81) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree Tree 1 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-The tree Tree 1 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- -> (artifact id: '83cccf7c57bdf21b9a6ea7b362674600') in 0.110479 seconds 
-  Import took 0.120034 seconds .
+  Time since last request: 0.000133 seconds.
+  path: Assets/Building/Casita3/Casita3_lambert1_MetallicSmoothness.png
+  artifactKey: Guid(c682d869a8c9111449d2deeb9512b6fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_lambert1_MetallicSmoothness.png using Guid(c682d869a8c9111449d2deeb9512b6fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c750ca88146ac597a6b8c6f9c416d94d') in 0.017219 seconds 
+  Import took 0.022082 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 20.999159 seconds.
-  path: Assets/Prefabs/Arrow.prefab
-  artifactKey: Guid(0edd8069e21c69b4584b2a014e6a3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Arrow.prefab using Guid(0edd8069e21c69b4584b2a014e6a3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '419f74b7783d7327c3647702835116af') in 0.145940 seconds 
-  Import took 0.151803 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000234 seconds.
-  path: Assets/Prefabs/Barrel (3).prefab
-  artifactKey: Guid(423560312204a2f498daeb9006feafec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Barrel (3).prefab using Guid(423560312204a2f498daeb9006feafec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd36f4ffd19e92e62a3b18c809cdab3') in 0.052688 seconds 
-  Import took 0.057123 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000232 seconds.
-  path: Assets/Prefabs/Casita2.prefab
-  artifactKey: Guid(f384ef67aac474146b502e8b87e1abb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Casita2.prefab using Guid(f384ef67aac474146b502e8b87e1abb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '764e46921466af43073be2931e3ca091') in 0.025977 seconds 
-  Import took 0.030359 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000244 seconds.
-  path: Assets/Prefabs/Player.prefab
-  artifactKey: Guid(5220d0277441e894dace346f30e250d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player.prefab using Guid(5220d0277441e894dace346f30e250d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3c657b0c3fa0fd1e2c1c21104331b85') in 0.126752 seconds 
-  Import took 0.132899 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000240 seconds.
-  path: Assets/Prefabs/Tree 1.prefab
-  artifactKey: Guid(e0dffc0dc1e26eb489a8b38e5049c4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tree 1.prefab using Guid(e0dffc0dc1e26eb489a8b38e5049c4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b59c04875ec2d634631da2bdd0bcc7da') in 0.083153 seconds 
-  Import took 0.092520 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000222 seconds.
-  path: Assets/Prefabs/Barrel 1.prefab
-  artifactKey: Guid(ec29ce06b48e28d489966a82822bc564) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Barrel 1.prefab using Guid(ec29ce06b48e28d489966a82822bc564) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5e9510001c6af870edcb485fca04701') in 0.019717 seconds 
-  Import took 0.025041 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/Prefabs/House1.prefab
-  artifactKey: Guid(49a74f6b895618d428d3727426958bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/House1.prefab using Guid(49a74f6b895618d428d3727426958bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40b2434a182d61a59f898e82d4cd3054') in 0.018258 seconds 
-  Import took 0.023543 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000218 seconds.
-  path: Assets/Prefabs/Bookstore 1.prefab
-  artifactKey: Guid(f061e8fa21c5f2049a8aef8f28f6a9a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Bookstore 1.prefab using Guid(f061e8fa21c5f2049a8aef8f28f6a9a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f1414b7b3d5924efc83d827d17fbfff') in 0.011425 seconds 
-  Import took 0.016842 seconds .
+  Time since last request: 0.000166 seconds.
+  path: Assets/Building/Casita3/Casita3_Spout_AlbedoTransparency.png
+  artifactKey: Guid(60f0f982c90e2e9418b91121937484ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Spout_AlbedoTransparency.png using Guid(60f0f982c90e2e9418b91121937484ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '280e3ced2209b8921af1dc757823b487') in 0.010505 seconds 
+  Import took 0.015635 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000172 seconds.
-  path: Assets/Prefabs/Camera.prefab
-  artifactKey: Guid(6a61091d6b211db48b08c022bef96bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Camera.prefab using Guid(6a61091d6b211db48b08c022bef96bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79572c6512ae1b9808daba98c75001f7') in 0.016423 seconds 
-  Import took 0.021343 seconds .
+  path: Assets/Building/Casita3/Casita3_fireplace_Normal.png
+  artifactKey: Guid(04883a3e266fec1439b6bebf55a3b14e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_fireplace_Normal.png using Guid(04883a3e266fec1439b6bebf55a3b14e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28d95bbdb402ef77cb5e1c5b82e27a24') in 0.010081 seconds 
+  Import took 0.015078 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000211 seconds.
-  path: Assets/Prefabs/Casita3.prefab
-  artifactKey: Guid(bc862ac414941554aa28fdd9bf206fa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Casita3.prefab using Guid(bc862ac414941554aa28fdd9bf206fa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4812cb191e630ee25b256c6baa8847fc') in 0.010098 seconds 
-  Import took 0.015345 seconds .
+  Time since last request: 0.000129 seconds.
+  path: Assets/Building/Casita3/Casita3_Railing_MetallicSmoothness.png
+  artifactKey: Guid(d566491fe733e434ca43ad15852f2c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Railing_MetallicSmoothness.png using Guid(d566491fe733e434ca43ad15852f2c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '140156c3db9669b1e542d6e69834687d') in 0.010241 seconds 
+  Import took 0.015634 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000232 seconds.
-  path: Assets/Prefabs/Canvas.prefab
-  artifactKey: Guid(736aa8655079e5a4da8e47b2af27ada3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Canvas.prefab using Guid(736aa8655079e5a4da8e47b2af27ada3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'befa8adde32e258df9cc81622fc956ce') in 0.019151 seconds 
-  Import took 0.024470 seconds .
+  Time since last request: 0.000120 seconds.
+  path: Assets/Building/Casita3/Casita3_Spout_Normal.png
+  artifactKey: Guid(928212ee5d5502043a41b3d81bc1d375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Spout_Normal.png using Guid(928212ee5d5502043a41b3d81bc1d375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2aaee603de8b5ebdfbfbd16bc58769a') in 0.009411 seconds 
+  Import took 0.014796 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000213 seconds.
-  path: Assets/Prefabs/Spider.prefab
-  artifactKey: Guid(d7a69780ab58411408beb95590bf5d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Spider.prefab using Guid(d7a69780ab58411408beb95590bf5d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cbe54eb6f9c6565c36eb0fe45149705') in 0.048280 seconds 
-  Import took 0.055815 seconds .
+  Time since last request: 0.000114 seconds.
+  path: Assets/Building/Casita3/Casita3_Railing_AlbedoTransparency.png
+  artifactKey: Guid(c1efe94ccc0804948984a96d3c224a47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Railing_AlbedoTransparency.png using Guid(c1efe94ccc0804948984a96d3c224a47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5699fa6f7e670c5eba5e39851864399') in 0.009849 seconds 
+  Import took 0.015122 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000207 seconds.
-  path: Assets/Prefabs/Obelisk.prefab
-  artifactKey: Guid(568dd1754f707b44aa895e187e409b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Obelisk.prefab using Guid(568dd1754f707b44aa895e187e409b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4fe5921dd5fc79d88fb7a568bf02136') in 0.009080 seconds 
-  Import took 0.014108 seconds .
+  Time since last request: 0.000183 seconds.
+  path: Assets/Building/Casita3/Casita3_Window_MetallicSmoothness.png
+  artifactKey: Guid(234b2cde98123414f8745ca2eb4098ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Window_MetallicSmoothness.png using Guid(234b2cde98123414f8745ca2eb4098ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3efdeb8bbecefa664d90bfc073a874bf') in 0.010705 seconds 
+  Import took 0.015913 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/Prefabs/TimeMachine.prefab
-  artifactKey: Guid(863ad3d62def41e44b89cae37bb93fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/TimeMachine.prefab using Guid(863ad3d62def41e44b89cae37bb93fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '873b65e53ea18f18e29185746439364d') in 0.063620 seconds 
-  Import took 0.068997 seconds .
+  Time since last request: 0.000191 seconds.
+  path: Assets/Building/Casita3/Casita3_lambert1_AlbedoTransparency.png
+  artifactKey: Guid(0d4850a74a6d9ef469a17f24faa19385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_lambert1_AlbedoTransparency.png using Guid(0d4850a74a6d9ef469a17f24faa19385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05692d5e20d2124b9354201698474e38') in 0.009036 seconds 
+  Import took 0.014042 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000184 seconds.
-  path: Assets/Prefabs/Barrel (2).prefab
-  artifactKey: Guid(9635dead886b8e9438d3c5d253c26f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Barrel (2).prefab using Guid(9635dead886b8e9438d3c5d253c26f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '744509ed299b5afb8cb6633bfeec59e1') in 0.013860 seconds 
-  Import took 0.018597 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000239 seconds.
-  path: Assets/Prefabs/Doors.prefab
-  artifactKey: Guid(b1a0b36f2803087449626331a2c1d2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Doors.prefab using Guid(b1a0b36f2803087449626331a2c1d2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5024d9a1456fb2183d8337774b2faa99') in 0.018924 seconds 
-  Import took 0.024835 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000217 seconds.
-  path: Assets/Prefabs/Box.prefab
-  artifactKey: Guid(c92b53554a7832f49929d915fe3592b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Box.prefab using Guid(c92b53554a7832f49929d915fe3592b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '489ef52910e87d1d84383cd30bb37f16') in 0.014659 seconds 
-  Import took 0.019749 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/Prefabs/Hook.prefab
-  artifactKey: Guid(37458ce14a850c048b55c2e2320445d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Hook.prefab using Guid(37458ce14a850c048b55c2e2320445d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c2ca39ee6765be97c3be4c0f8f6e8db') in 0.010614 seconds 
-  Import took 0.015585 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/Prefabs/Lamp.prefab
-  artifactKey: Guid(233363b8275e468408a87d2b6c01dbe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Lamp.prefab using Guid(233363b8275e468408a87d2b6c01dbe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbb637fb17c11028d248e726933e200d') in 0.016753 seconds 
-  Import took 0.022145 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000278 seconds.
-  path: Assets/Prefabs/CameraDriver.prefab
-  artifactKey: Guid(8f461c15e818639498a4cb2b28e3ef25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/CameraDriver.prefab using Guid(8f461c15e818639498a4cb2b28e3ef25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7a9a44fb90d4bd91a1a2b74215b0cfe') in 0.012515 seconds 
-  Import took 0.017826 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/Prefabs/Mini-Barrel.prefab
-  artifactKey: Guid(8a2762eb61dff544b994d01765e98eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Mini-Barrel.prefab using Guid(8a2762eb61dff544b994d01765e98eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c0b7dff21190e84d9f233b2c0462616') in 0.006442 seconds 
-  Import took 0.012023 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Prefabs/Casita.prefab
-  artifactKey: Guid(243941efe6969d24da7f4d42f435997e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Casita.prefab using Guid(243941efe6969d24da7f4d42f435997e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eb3be3200b8f0042685eb1dd18afaf8') in 0.011490 seconds 
-  Import took 0.017012 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 45.027066 seconds.
-  path: Assets/Building/Casita3.fbx
-  artifactKey: Guid(fb7bf039a6300164d9aede9ce9bb663b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Building/Casita3.fbx using Guid(fb7bf039a6300164d9aede9ce9bb663b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b59f56ef038c876b0d6ee62534c067d') in 0.101624 seconds 
-  Import took 0.107906 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/Building/Lamp.fbx
-  artifactKey: Guid(38b60819824c87645b8d9ab80775acd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Building/Lamp.fbx using Guid(38b60819824c87645b8d9ab80775acd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ae46cbd762d69e61059d61cc9622b83') in 0.057893 seconds 
-  Import took 0.062386 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/Building/Fountain.fbx
-  artifactKey: Guid(a4314faea6cf8be44893764bc5e8f5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Building/Fountain.fbx using Guid(a4314faea6cf8be44893764bc5e8f5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e7c245d2659f25af926209ebb8a9b48') in 0.030606 seconds 
-  Import took 0.035144 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.091662 seconds.
-  path: Assets/Building/Hueco.fbx
-  artifactKey: Guid(537c0bd3483c55a4088ec05875f5aa4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Building/Hueco.fbx using Guid(537c0bd3483c55a4088ec05875f5aa4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3db05cf7e68e62f895b3a195a354b3a2') in 0.038557 seconds 
-  Import took 0.043839 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.060241 seconds.
-  path: Assets/Building/AgujeroCasaEngranajes_Cajita_AlbedoTransparency.png
-  artifactKey: Guid(777d2a58b645dff43b823f4ee304dbcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Building/AgujeroCasaEngranajes_Cajita_AlbedoTransparency.png using Guid(777d2a58b645dff43b823f4ee304dbcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0a89ed01a2c0e75ae8f00be42b94956') in 0.022811 seconds 
-  Import took 0.027899 seconds .
+  Time since last request: 0.000141 seconds.
+  path: Assets/Building/Casita3/Casita3_Spout_MetallicSmoothness.png
+  artifactKey: Guid(3e56bcc8914e8714c808836e459043e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Spout_MetallicSmoothness.png using Guid(3e56bcc8914e8714c808836e459043e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c6768f0da48de8c6dfecc417e412326') in 0.010275 seconds 
+  Import took 0.015495 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000185 seconds.
-  path: Assets/Building/AgujeroCasaEngranajes_Cajita_MetallicSmoothness.png
-  artifactKey: Guid(be4aeb17c9c6b6249b36a70c5da19b77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Building/AgujeroCasaEngranajes_Cajita_MetallicSmoothness.png using Guid(be4aeb17c9c6b6249b36a70c5da19b77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75af15bbb5c8d7e3cf443bcd8ee66ffd') in 0.018673 seconds 
-  Import took 0.023186 seconds .
+  path: Assets/Building/Casita3/Casita3_Railing_Normal.png
+  artifactKey: Guid(e58dd744aa2275347a7708c671ebc336) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Railing_Normal.png using Guid(e58dd744aa2275347a7708c671ebc336) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b94d87ad42821f5e6d04c37398ba743') in 0.009806 seconds 
+  Import took 0.014913 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/Building/AgujeroCasaEngranajes_Cajita_Normal.png
-  artifactKey: Guid(e74eaf693127675449746be7b999e177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Building/AgujeroCasaEngranajes_Cajita_Normal.png using Guid(e74eaf693127675449746be7b999e177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1d9ba097db6cc6d454f637623705b85') in 0.009442 seconds 
-  Import took 0.014462 seconds .
+  Time since last request: 0.000192 seconds.
+  path: Assets/Building/Casita3/Casita3_lambert1_Normal.png
+  artifactKey: Guid(d09212db9e0fdce498de085035b7386f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_lambert1_Normal.png using Guid(d09212db9e0fdce498de085035b7386f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dd32a239e4a5968ec166e59616222c3') in 0.008428 seconds 
+  Import took 0.013920 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.979943 seconds.
-  path: Assets/Building/Hueco
-  artifactKey: Guid(905b8656e7ea2bf488bf4f18176e1bb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Building/Hueco using Guid(905b8656e7ea2bf488bf4f18176e1bb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb76ec26a67a8766a34dee3fbe7b17f8') in 0.001702 seconds 
-  Import took 0.007352 seconds .
+  Time since last request: 0.000147 seconds.
+  path: Assets/Building/Casita3/Casita3_Door_AlbedoTransparency.png
+  artifactKey: Guid(edda9ebca66bb2343b590ee16b8c68dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Door_AlbedoTransparency.png using Guid(edda9ebca66bb2343b590ee16b8c68dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11bd3f3a4c8dec63ce694a65b93610b7') in 0.010072 seconds 
+  Import took 0.015245 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 37.894267 seconds.
-  path: Assets/Building/Hueco/Hueco.mat
-  artifactKey: Guid(bb65a8e5a89c8e946bbb7f9b006efcad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Building/Hueco/Hueco.mat using Guid(bb65a8e5a89c8e946bbb7f9b006efcad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1167ecc9aa08cc02d63f88ae9c18bcf5') in 0.010300 seconds 
-  Import took 0.016074 seconds .
+  Time since last request: 0.000170 seconds.
+  path: Assets/Building/Casita3/Casita3_Door_MetallicSmoothness.png
+  artifactKey: Guid(0ee361258eae83045bab20fbed753f7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Door_MetallicSmoothness.png using Guid(0ee361258eae83045bab20fbed753f7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30e26f71d5c8807f7f66b7aaf885b12c') in 0.010747 seconds 
+  Import took 0.015985 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.351945 seconds.
-  path: Assets/Building/Hueco/AgujeroCasaEngranajes_Cajita_Normal.png
-  artifactKey: Guid(e74eaf693127675449746be7b999e177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Building/Hueco/AgujeroCasaEngranajes_Cajita_Normal.png using Guid(e74eaf693127675449746be7b999e177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e88ed546fc8e1e99db2bd34a9a89e7a7') in 0.011000 seconds 
-  Import took 0.016422 seconds .
+  Time since last request: 0.000176 seconds.
+  path: Assets/Building/Casita3/Casita3_fireplace_MetallicSmoothness.png
+  artifactKey: Guid(80d985e1a2a0d5f49b54e9156f259b63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_fireplace_MetallicSmoothness.png using Guid(80d985e1a2a0d5f49b54e9156f259b63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '368c6710b20949376851acc16fd46ebe') in 0.010704 seconds 
+  Import took 0.015845 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 78.896347 seconds.
-  path: Assets/Building/Hueco/Hueco.mat
-  artifactKey: Guid(bb65a8e5a89c8e946bbb7f9b006efcad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Building/Hueco/Hueco.mat using Guid(bb65a8e5a89c8e946bbb7f9b006efcad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9baa921a5a42ee064b9126ce9b388f39') in 0.010877 seconds 
-  Import took 0.016488 seconds .
+  Time since last request: 0.000120 seconds.
+  path: Assets/Building/Casita3/Casita3_Default_Material_Normal.png
+  artifactKey: Guid(6477fbb0c44d94140a12249b1d187008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Default_Material_Normal.png using Guid(6477fbb0c44d94140a12249b1d187008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4979303f08f0995ed2079f770207b62') in 0.009477 seconds 
+  Import took 0.014515 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/Building/Casita3/Casita3_House_Normal.png
+  artifactKey: Guid(eb4fda85f0d7e5b43a36c6c3ee6661cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_House_Normal.png using Guid(eb4fda85f0d7e5b43a36c6c3ee6661cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d04a97acd97e92b959d50b6b6fab37c') in 0.009772 seconds 
+  Import took 0.015018 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Building/Casita3/Casita3_Window_Normal.png
+  artifactKey: Guid(b56d1baaf0dfce94f9d0a14f4338925e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Window_Normal.png using Guid(b56d1baaf0dfce94f9d0a14f4338925e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eba02680ae754a160125eefa4b73fcd7') in 0.009925 seconds 
+  Import took 0.015119 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Building/Casita3/Casita3_Door_Normal.png
+  artifactKey: Guid(dc7d2d16c70366641a289bf0a145cc93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Door_Normal.png using Guid(dc7d2d16c70366641a289bf0a145cc93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad64cfaa58a2d7a7afad1b485713d536') in 0.009413 seconds 
+  Import took 0.014721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Building/Casita3/Casita3_House_AlbedoTransparency.png
+  artifactKey: Guid(7c9f84f680a0fed48bfed69e665fcabc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_House_AlbedoTransparency.png using Guid(7c9f84f680a0fed48bfed69e665fcabc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1df118be1acf3bce023d84f954eac4fb') in 0.009664 seconds 
+  Import took 0.014620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Building/Casita3/Casita3_Window_AlbedoTransparency.png
+  artifactKey: Guid(18ddd26178b01f64a985ca3a6b612302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Window_AlbedoTransparency.png using Guid(18ddd26178b01f64a985ca3a6b612302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cea5ed44e5c2c67b7daca8f98017dcd') in 0.009983 seconds 
+  Import took 0.015390 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Building/Casita3/Casita3_House_MetallicSmoothness.png
+  artifactKey: Guid(4d9822e4bdafe034aa70b2c877cf1cb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_House_MetallicSmoothness.png using Guid(4d9822e4bdafe034aa70b2c877cf1cb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '416b1e885f055a93a61a3c0f9b5a9843') in 0.010692 seconds 
+  Import took 0.015940 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/Building/Casita3/Casita3_fireplace_AlbedoTransparency.png
+  artifactKey: Guid(29ab4201e303858459ab5d2f02fa2251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_fireplace_AlbedoTransparency.png using Guid(29ab4201e303858459ab5d2f02fa2251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aec4b6756200dc01946a4a459a1bf778') in 0.009507 seconds 
+  Import took 0.014745 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Building/Casita3/Casita3_Default_Material_MetallicSmoothness.png
+  artifactKey: Guid(a109d04bca152cc42865eee99473f784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Default_Material_MetallicSmoothness.png using Guid(a109d04bca152cc42865eee99473f784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83225ae3ce648f53182123c0a36c2f2b') in 0.012056 seconds 
+  Import took 0.017204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.531596 seconds.
+  path: Assets/Building/Casita3/Casita3_Window_Normal.png
+  artifactKey: Guid(b56d1baaf0dfce94f9d0a14f4338925e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Window_Normal.png using Guid(b56d1baaf0dfce94f9d0a14f4338925e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c64ef341a954520f57df3c1dd205325') in 0.016045 seconds 
+  Import took 0.022036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.281420 seconds.
+  path: Assets/Building/Casita3/Casita3_Spout_Normal.png
+  artifactKey: Guid(928212ee5d5502043a41b3d81bc1d375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Spout_Normal.png using Guid(928212ee5d5502043a41b3d81bc1d375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d853ca1fd431afb3c03f28b5144fe02') in 0.010687 seconds 
+  Import took 0.016632 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.793552 seconds.
+  path: Assets/Building/Casita3/Casita3_Railing_Normal.png
+  artifactKey: Guid(e58dd744aa2275347a7708c671ebc336) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Railing_Normal.png using Guid(e58dd744aa2275347a7708c671ebc336) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4707594373894e0e8e9f7aa9dd5d892c') in 0.016322 seconds 
+  Import took 0.022105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.278663 seconds.
+  path: Assets/Building/Casita3/Casita3_lambert1_Normal.png
+  artifactKey: Guid(d09212db9e0fdce498de085035b7386f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_lambert1_Normal.png using Guid(d09212db9e0fdce498de085035b7386f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ef61e0eaa0ec3993658e363c119bdaa') in 0.011107 seconds 
+  Import took 0.017351 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.227012 seconds.
+  path: Assets/Building/Casita3/Casita3_House_Normal.png
+  artifactKey: Guid(eb4fda85f0d7e5b43a36c6c3ee6661cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_House_Normal.png using Guid(eb4fda85f0d7e5b43a36c6c3ee6661cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33c028b3f89cc2f80c4462dee1031e94') in 0.015952 seconds 
+  Import took 0.021713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.189312 seconds.
+  path: Assets/Building/Casita3/Casita3_fireplace_Normal.png
+  artifactKey: Guid(04883a3e266fec1439b6bebf55a3b14e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_fireplace_Normal.png using Guid(04883a3e266fec1439b6bebf55a3b14e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce3de212454088f0f01983bcc1540806') in 0.011670 seconds 
+  Import took 0.017184 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.102421 seconds.
+  path: Assets/Building/Casita3/Casita3_Door_Normal.png
+  artifactKey: Guid(dc7d2d16c70366641a289bf0a145cc93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Door_Normal.png using Guid(dc7d2d16c70366641a289bf0a145cc93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '400348fc0f4a2d789bb5582a86026e50') in 0.012779 seconds 
+  Import took 0.018281 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.754171 seconds.
+  path: Assets/Building/Casita3/Casita3_Default_Material_Normal.png
+  artifactKey: Guid(6477fbb0c44d94140a12249b1d187008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Casita3_Default_Material_Normal.png using Guid(6477fbb0c44d94140a12249b1d187008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '655bd4a247b187c2f0b3cb949d890343') in 0.015430 seconds 
+  Import took 0.020551 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.920606 seconds.
+  path: Assets/Building/Casita3
+  artifactKey: Guid(f989336c4f426b14aa9a6ddd5585645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3 using Guid(f989336c4f426b14aa9a6ddd5585645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ace7f392300933e2b7b9f1103c70ec48') in 0.004503 seconds 
+  Import took 0.009958 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.333177 seconds.
+  path: Assets/Building/Casita3/New Material.mat
+  artifactKey: Guid(3c38f7be8b2934546a8d2ee079c79705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/New Material.mat using Guid(3c38f7be8b2934546a8d2ee079c79705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc0c00c21c9ff2bb193d8039b87f5254') in 0.008569 seconds 
+  Import took 0.014693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.174338 seconds.
+  path: Assets/Building/Casita3/Techo.mat
+  artifactKey: Guid(3c38f7be8b2934546a8d2ee079c79705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Techo.mat using Guid(3c38f7be8b2934546a8d2ee079c79705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '044c0dc6ad928898e8d0953c95ab5dfc') in 0.009656 seconds 
+  Import took 0.015231 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.251105 seconds.
+  path: Assets/Building/Casita3/Door.mat
+  artifactKey: Guid(42e2e6539c99c554ba0cd73343d5cacc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Door.mat using Guid(42e2e6539c99c554ba0cd73343d5cacc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '709970424bfe6e98a330ae2bfb2aedb2') in 0.011173 seconds 
+  Import took 0.016620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/Building/Casita3/Techo.mat
+  artifactKey: Guid(3c38f7be8b2934546a8d2ee079c79705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Techo.mat using Guid(3c38f7be8b2934546a8d2ee079c79705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c242cd607bac77bedb5ce27eea174c5') in 0.025483 seconds 
+  Import took 0.030364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.943288 seconds.
+  path: Assets/Building/Casita3/Door.mat
+  artifactKey: Guid(42e2e6539c99c554ba0cd73343d5cacc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Door.mat using Guid(42e2e6539c99c554ba0cd73343d5cacc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '584a9933528f6221623de2b4addd589b') in 0.024448 seconds 
+  Import took 0.029829 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Building/Casita3/House.mat
+  artifactKey: Guid(c893508ea677620429288ce4d8b1723b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/House.mat using Guid(c893508ea677620429288ce4d8b1723b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ee112374661b2ab8206573ac8408a19') in 0.012809 seconds 
+  Import took 0.018274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 89.809358 seconds.
+  path: Assets/Building/Casita3/House.mat
+  artifactKey: Guid(c893508ea677620429288ce4d8b1723b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/House.mat using Guid(c893508ea677620429288ce4d8b1723b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a08a6e4be2913d222de08d8053a87666') in 0.014907 seconds 
+  Import took 0.020133 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Building/Casita3/Railing.mat
+  artifactKey: Guid(ee192d24a68dddf4d9419d2e92713f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Railing.mat using Guid(ee192d24a68dddf4d9419d2e92713f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fddb5c96fc4acdc31c8312740fa9e581') in 0.010151 seconds 
+  Import took 0.015366 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.204611 seconds.
+  path: Assets/Building/Casita3/Railing.mat
+  artifactKey: Guid(ee192d24a68dddf4d9419d2e92713f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Railing.mat using Guid(ee192d24a68dddf4d9419d2e92713f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d66e2e97352a769873c30b2b15908ee') in 0.013381 seconds 
+  Import took 0.018451 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Building/Casita3/Spout.mat
+  artifactKey: Guid(e4a5b3b5b33af59469bc460ae7f78679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Spout.mat using Guid(e4a5b3b5b33af59469bc460ae7f78679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a90552a081d3059888f5389e6a50d2e8') in 0.014580 seconds 
+  Import took 0.019867 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.189258 seconds.
+  path: Assets/Building/Casita3/Chimenea.mat
+  artifactKey: Guid(730a879d4d78d154aa21bb11686edfec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Chimenea.mat using Guid(730a879d4d78d154aa21bb11686edfec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dad27d2d0110e9f4a6013bfbe1265ddd') in 0.009438 seconds 
+  Import took 0.014954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Building/Casita3/Spout.mat
+  artifactKey: Guid(e4a5b3b5b33af59469bc460ae7f78679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Spout.mat using Guid(e4a5b3b5b33af59469bc460ae7f78679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a80c27b683c2e3bdba8678ede65191a') in 0.010095 seconds 
+  Import took 0.015309 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.818441 seconds.
+  path: Assets/Building/Casita3/Chimenea.mat
+  artifactKey: Guid(730a879d4d78d154aa21bb11686edfec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Chimenea.mat using Guid(730a879d4d78d154aa21bb11686edfec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24ee0161d58df41b06e3d1914048ad34') in 0.010254 seconds 
+  Import took 0.015385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Building/Casita3/Windows.mat
+  artifactKey: Guid(47dd062d0d2cd8e42a6208ed9043e4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Windows.mat using Guid(47dd062d0d2cd8e42a6208ed9043e4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e928ddec6fdbd3e1832ea3351472295a') in 0.009200 seconds 
+  Import took 0.015069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 115.227189 seconds.
+  path: Assets/Building/Casita3/Windows.mat
+  artifactKey: Guid(47dd062d0d2cd8e42a6208ed9043e4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Building/Casita3/Windows.mat using Guid(47dd062d0d2cd8e42a6208ed9043e4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4803346d6b630f84255a72ec698fdd27') in 0.011681 seconds 
+  Import took 0.018109 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

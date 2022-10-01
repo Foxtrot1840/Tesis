@@ -3095,7 +3095,7 @@ MonoBehaviour:
   _shootPoint: {fileID: 12978924}
   _hook: {fileID: 1676354955}
   _hand: {fileID: 814047725}
-  _hookDistance: 75
+  _hookDistance: 50
   _line: {fileID: 1676354957}
 --- !u!4 &300920455 stripped
 Transform:
@@ -20302,15 +20302,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3220184910130369828, guid: 8f461c15e818639498a4cb2b28e3ef25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.10354865
+      value: 0.10354863
       objectReference: {fileID: 0}
     - target: {fileID: 3220184910130369828, guid: 8f461c15e818639498a4cb2b28e3ef25, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.015696796
+      value: -0.01569676
       objectReference: {fileID: 0}
     - target: {fileID: 3220184910130369828, guid: 8f461c15e818639498a4cb2b28e3ef25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0016343724
+      value: 0.0016343684
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f461c15e818639498a4cb2b28e3ef25, type: 3}
