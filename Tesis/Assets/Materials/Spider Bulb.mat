@@ -21,21 +21,28 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Spider Bulb
-  m_Shader: {fileID: 4800000, guid: 650dd9526735d5b46b79224bc6e94025, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 08d48c62385f1b948a0a290eefadbffd, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses:
   - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_2f23d6cd4908451697c904a5c197b15d:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - Texture2D_541a9788160c417aa3e498ee0951ac0e:
         m_Texture: {fileID: 2800000, guid: f9e8b7b58b4724449b51f194374c33ac, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_fd3a35dc5c8f4dc4991e5b8f7ecc34a6:
+        m_Texture: {fileID: 2800000, guid: f6d6e9806b6811e40b7b14e330bf41d4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -95,7 +102,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_0978ec98ff2a45f7b77fafa9582b03de: 1000
+    - Vector1_0978ec98ff2a45f7b77fafa9582b03de: 2000
+    - Vector1_5dc19f1ec83446f5b1d5f547c3a36a8a: 0.61
     - _AlphaClip: 0
     - _AmbientStrength: 0.11
     - _Blend: 2
@@ -108,12 +116,12 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 1
     - _EnvironmentReflections: 1
-    - _FalloffAmount: 0.28
+    - _FalloffAmount: 0.25
     - _FresnelSize: 0.1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _LightingCutoff: 0.22
+    - _LightingCutoff: 0.35
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005

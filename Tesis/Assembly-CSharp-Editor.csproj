@@ -280,14 +280,14 @@
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.WebGL.Extensions">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.OSXStandalone.Extensions">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.AppleTV.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
@@ -296,25 +296,34 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Newtonsoft.Json">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Antlr3.Runtime">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="unityplastic">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.NRefactory">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/PackageCache/com.unity.render-pipelines.core@10.9.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.render-pipelines.core@10.9.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -664,108 +673,139 @@
  <Reference Include="System.Xml.XPath.XDocument">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Universal.Shaders">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Universal.Runtime">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Sysroot.Linux_x86_64">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Searcher.Editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TerrainTools">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
- </Reference>
- <Reference Include="Cinemachine">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.cinemachine.editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Universal.Editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TerrainTools.Editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics.Editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.Editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.SysrootPackage.Editor">
- <HintPath>C:/Users/Alejandro/Desktop/Tesis/Tesis/Tesis/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{a76f241e-da7a-8063-0122-e7550e5be9ef}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{5d16cc1d-85ad-baa4-a91e-f8909d0269e4}</Project>
+      <Name>UnityEngine.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.TestRunner.csproj">
+      <Project>{4e471222-6e25-6d3f-bfb1-5a10b67de87f}</Project>
+      <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
     <ProjectReference Include="AmplifyShaderEditor.csproj">
       <Project>{4ec91b8d-f978-bce9-e373-8fb2ffa572d4}</Project>
       <Name>AmplifyShaderEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{f799b371-323f-9333-edc1-0f54a357489a}</Project>
+      <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
+      <Project>{5e3404c8-4b0b-e709-5d56-5faf51bd1a4e}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
+      <Project>{f2ac5c46-21c5-5d27-89b9-f0a342dd3e4d}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{b868fe31-5f50-9d67-36f6-97f5074896e3}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
+      <Project>{716df31d-b7a4-b222-fd91-1fca65293cf0}</Project>
+      <Name>Unity.VisualStudio.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Sysroot.Linux_x86_64.csproj">
+      <Project>{84cf3306-1798-24e0-d0fb-f139b61cbb97}</Project>
+      <Name>Unity.Sysroot.Linux_x86_64</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{a40ab982-02f2-caef-3817-21c2d07c43c3}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{33f550bb-2385-1847-66ec-a632421382cd}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Searcher.Editor.csproj">
+      <Project>{28289dfb-e79c-e7ab-9abd-a9fe60c65a5b}</Project>
+      <Name>Unity.Searcher.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{9265fcc3-2d16-1fd7-2dcb-807aa256a136}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{03bf706d-cddd-f8e2-7586-3d67131569b6}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
+      <Project>{0dffd861-65ec-d9f1-56aa-f362ac715e2c}</Project>
+      <Name>Unity.PlasticSCM.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{2f9edb55-333c-3c25-a833-1abe4d6d65be}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
+      <Project>{a43b66d4-76a3-6afc-cc41-555925b03a62}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{6bbb4498-e83b-027f-72a3-90a6c8375097}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{636f9fb6-e37a-72de-05ea-cb9f64fdcfbf}</Project>
+      <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
+      <Project>{c7dd4553-e36d-5b6a-35ec-d10616f2f41e}</Project>
+      <Name>Unity.ShaderGraph.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TerrainTools.csproj">
+      <Project>{4218e3b0-6509-b359-8dca-18f1db94b07f}</Project>
+      <Name>Unity.TerrainTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{7d21e37b-0135-ba54-e60d-7f5ce2d1c36c}</Project>
+      <Name>Cinemachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{32d6a20e-16d2-f6f5-3cad-d4b5063d5b15}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
+      <Project>{37f287b6-f731-6988-cf38-108b5fc5c09d}</Project>
+      <Name>Unity.RenderPipelines.Universal.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TerrainTools.Editor.csproj">
+      <Project>{90507ba5-dd22-3b89-fcb5-144607a1ea44}</Project>
+      <Name>Unity.TerrainTools.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64.csproj">
+      <Project>{117b076e-4890-3125-4d4b-32ded8e794ae}</Project>
+      <Name>Unity.Toolchain.Win-x86_64-Linux-x86_64</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
+      <Project>{377f2c17-f744-9738-7fc7-f66c6ef63718}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{55fef562-f3fc-79f8-9ace-07b9b02fcb75}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{8378b128-ca37-1bf2-4cb1-bda88c300239}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
+      <Project>{b7d54a49-2f9a-b05e-77e2-dfcfc81249ed}</Project>
+      <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{6e44e0ee-3dae-43c6-4d43-22e4b4a59f34}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.SysrootPackage.Editor.csproj">
+      <Project>{38c921ed-b4e8-5742-9e84-8143cb4f26ba}</Project>
+      <Name>Unity.SysrootPackage.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
