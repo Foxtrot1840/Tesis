@@ -70,7 +70,7 @@ public class Model
         _zoomCameraOffset.m_FollowOffset += rotation;
 
         _normalCameraOffset.m_FollowOffset.y =
-            _zoomCameraOffset.m_FollowOffset.y = Mathf.Clamp(_normalCameraOffset.m_FollowOffset.y, 0.5f, 3);
+            _zoomCameraOffset.m_FollowOffset.y = Mathf.Clamp(_normalCameraOffset.m_FollowOffset.y, 0.2f, 3.5f);
     }
 
     public void Jump()
