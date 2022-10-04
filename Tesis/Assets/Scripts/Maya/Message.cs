@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,11 +12,13 @@ public class Message : MonoBehaviour
 
     private bool activeMessage;
 
-    private void Update()
+    private void Start()
     {
-        if (activeMessage == true)
-        {
-            objectMessage.SetActive(false);
-        }
+        Invoke("TurnOff",3);
+    }
+
+    private void TurnOff()
+    {
+        objectMessage.SetActive(false);
     }
 }
