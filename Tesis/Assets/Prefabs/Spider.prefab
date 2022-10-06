@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7584551864891512044}
   - component: {fileID: 6840517213547240265}
   - component: {fileID: 8721943470588915587}
+  - component: {fileID: 1428907544648409612}
   - component: {fileID: 919132148705010503}
   - component: {fileID: 7965847922115134182}
   - component: {fileID: 919132148705010505}
@@ -87,6 +88,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1428907544648409612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7064578881471303254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a72ac3e316f8348a89616e45128acc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 0}
+  spiderMaterials:
+  - {fileID: 2100000, guid: a9785a9979444a04c846f1dd9c7af783, type: 2}
+  - {fileID: 2100000, guid: 98adcc43d4627e64b8dce50e5ba37f9e, type: 2}
+  - {fileID: 2100000, guid: d9918fd3ccdb0c24686ce66673c2430d, type: 2}
+  - {fileID: 2100000, guid: a2a3c772221af5e44bb7b2aa705a76ec, type: 2}
+  detectionMaterials:
+  - {fileID: 2100000, guid: dc6a6f19c7fe1064fbabfb6dcc7c44f6, type: 2}
+  - {fileID: 2100000, guid: dc6a6f19c7fe1064fbabfb6dcc7c44f6, type: 2}
+  - {fileID: 2100000, guid: dc6a6f19c7fe1064fbabfb6dcc7c44f6, type: 2}
+  - {fileID: 2100000, guid: dc6a6f19c7fe1064fbabfb6dcc7c44f6, type: 2}
 --- !u!195 &919132148705010503
 NavMeshAgent:
   m_ObjectHideFlags: 0
