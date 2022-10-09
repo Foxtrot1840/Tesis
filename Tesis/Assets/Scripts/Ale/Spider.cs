@@ -56,14 +56,11 @@ public class Spider : Entity
     
     IEnumerator Attack()
     {
-        _renderer.material.color = Color.red;
-        yield return new WaitForSeconds(.2f);
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, _rangeAttack))
         {
             IDamagable dmg = hit.collider.GetComponent<IDamagable>();
             if(dmg != null) dmg.GetDamage(damage);
         }
-        _renderer.material.color = Color.white;
         yield return new WaitForSeconds(cooldown);
         _isAttack = false;
     }
