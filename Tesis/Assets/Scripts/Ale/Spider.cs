@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using TMPro;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class Spider : Entity
 {
     private NavMeshAgent _navMesh;
     private Transform _player;
-    private Renderer _renderer; 
+    private Animator _anim;
     
     public float _range;
         
@@ -26,26 +27,27 @@ public class Spider : Entity
         currentHealth = _maxHealth;
         _player = GameManager.instance._player.transform;
         _navMesh = GetComponent<NavMeshAgent>();
-        _renderer = GetComponent<Renderer>();
+        _anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
         if (Vector3.Distance(transform.position,_player.position) < _rangeAttack)
         {
-            _navMesh.destination = transform.position;
-            if (!_isAttack)
-            {
-                _isAttack = true;
-                StartCoroutine(Attack());
-            }
-
             if (!Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, _rangeAttack))
             {
-                Debug.Log("Rote");
-                    Quaternion rotation = Quaternion.LookRotation(_player.position - transform.position);
-                    transform.rotation = Quaternion.Lerp(transform.rotation, rotation, 5 * Time.deltaTime);
-                    transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+                Quaternion rotation = Quaternion.LookRotation(_player.position - transform.position);
+                transform.rotation = Quaternion.Lerp(transform.rotation, rotation, 5 * Time.deltaTime);
+                transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+            }
+            else
+            {
+                _navMesh.destination = transform.position;
+                if (!_isAttack)
+                {
+                    _isAttack = true;
+                    StartCoroutine(CorrutineAttack());
+                }
             }
         }
         else if (Vector3.Distance(transform.position,_player.position) < _range)
@@ -54,17 +56,23 @@ public class Spider : Entity
         }
     }
     
-    IEnumerator Attack()
+    IEnumerator CorrutineAttack()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, _rangeAttack))
-        {
-            IDamagable dmg = hit.collider.GetComponent<IDamagable>();
-            if(dmg != null) dmg.GetDamage(damage);
-        }
+        _anim.SetTrigger("Attack");
         yield return new WaitForSeconds(cooldown);
         _isAttack = false;
     }
 
+    public void Attack()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, _rangeAttack))
+        {
+            IDamagable dmg = hit.collider.GetComponent<IDamagable>();
+            Debug.Log(hit.collider.name);
+            if(dmg != null) dmg.GetDamage(damage);
+        }
+    }
+    
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
@@ -73,9 +81,9 @@ public class Spider : Entity
         Gizmos.DrawWireSphere(transform.position, _rangeAttack);
     }
 
-    public override void GetDamage(int damage)
+    public override void GetDamage(int damage, Vector3 particles)
     {
         SoundManager.instance.Play(SoundID.Spider);
-        base.GetDamage(damage);
+        base.GetDamage(damage, particles);
     }
 }

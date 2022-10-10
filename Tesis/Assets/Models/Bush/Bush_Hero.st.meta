@@ -1,0 +1,69 @@
+fileFormatVersion: 2
+guid: 2eb1f2f96ac02dd488443760f066b7e8
+SpeedTreeImporter:
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bark_LOD0
+    second: {fileID: 2100000, guid: 2c4db5c75d051514c8f38a858c7cb902, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bush_Hero_LOD0
+    second: {fileID: 2100000, guid: 891724d70e414b048ac57de3ece8454b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bush_Hero_LOD1
+    second: {fileID: 2100000, guid: c4f111233e512364192f12fcce6fbcb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bush_Hero_LOD2
+    second: {fileID: 2100000, guid: b32f7fb80ab52f146a00bf5007c36001, type: 2}
+  serializedVersion: 6
+  mainColor: {r: 1, g: 1, b: 1, a: 1}
+  hueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
+  alphaTestRef: 0.33
+  bestWindQuality: 4
+  hasBillboard: 0
+  lODSettings:
+  - height: 0.5
+    castShadows: 1
+    receiveShadows: 1
+    useLightProbes: 1
+    reflectionProbeUsage: 1
+    enableBump: 1
+    enableHue: 1
+    enableSubsurface: 1
+    windQuality: 4
+  - height: 0.25
+    castShadows: 1
+    receiveShadows: 1
+    useLightProbes: 1
+    reflectionProbeUsage: 1
+    enableBump: 1
+    enableHue: 1
+    enableSubsurface: 1
+    windQuality: 4
+  - height: 0.01
+    castShadows: 1
+    receiveShadows: 1
+    useLightProbes: 1
+    reflectionProbeUsage: 1
+    enableBump: 1
+    enableHue: 1
+    enableSubsurface: 1
+    windQuality: 4
+  enableSmoothLODTransition: 1
+  animateCrossFading: 1
+  billboardTransitionCrossFadeWidth: 0.25
+  fadeOutWidth: 0.25
+  scaleFactor: 0.3048
+  materialVersion: 3
+  materialLocation: 1
+  fileIDType: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

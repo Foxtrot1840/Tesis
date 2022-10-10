@@ -12,15 +12,15 @@ public class Damage : MonoBehaviour
     {
         IDamagable damagable = collision.gameObject.GetComponent<IDamagable>();
         if (damagable == null) return;
-        damagable.GetDamage(damage);
-        if(_destroyObject) DestroyImmediate(gameObject);
+        damagable.GetDamage(damage, collision.GetContact(0).point);
+        if(_destroyObject) Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         IDamagable damagable = other.gameObject.GetComponent<IDamagable>();
         if (damagable == null) return;
-        damagable.GetDamage(damage);
+        damagable.GetDamage(damage, other.ClosestPoint(other.transform.position));
         if(_destroyObject) Destroy(gameObject);
     }
 }
