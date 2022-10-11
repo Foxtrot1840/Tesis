@@ -106,16 +106,16 @@
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\2D\Light2DAuthoring.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\Overrides\Vignette.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\Data\UniversalRenderPipelineEditorResources.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\2D\Renderer2D.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\XR\XRSystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\2D\Renderer2D.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\Overrides\Tonemapping.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\ScriptableRenderer.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\2D\Passes\Utility\Light2DLookupTexture.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\2D\Light2D.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\DeferredTiler.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\UniversalRenderPipelineCore.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\Overrides\ChannelMixer.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\Passes\ColorGradingLutPass.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\UniversalRenderPipelineCore.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\Passes\XROcclusionMeshPass.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\Overrides\ColorCurves.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.9.0\Runtime\External\LibTessDotNet\PriorityQueue.cs" />
@@ -411,6 +411,9 @@
  </Reference>
  <Reference Include="unityplastic">
  <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst.Unsafe">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
  <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
@@ -791,6 +794,10 @@
     <ProjectReference Include="Unity.Mathematics.csproj">
       <Project>{636f9fb6-e37a-72de-05ea-cb9f64fdcfbf}</Project>
       <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{9a50f15c-6187-4099-ad68-6a3cf737b9c0}</Project>
+      <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{03bf706d-cddd-f8e2-7586-3d67131569b6}</Project>

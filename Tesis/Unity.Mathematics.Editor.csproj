@@ -52,11 +52,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics.Editor\MatrixDrawer.cs" />
-     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics.Editor\PostNormalizedVectorDrawer.cs" />
-     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics.Editor\QuaternionDrawer.cs" />
-     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics.Editor\PrimitiveVectorDrawer.cs" />
-     <None Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics.Editor\Unity.Mathematics.Editor.asmdef" />
+     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.1\Unity.Mathematics.Editor\MatrixDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.1\Unity.Mathematics.Editor\PostNormalizedVectorDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.1\Unity.Mathematics.Editor\QuaternionDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.mathematics@1.2.1\Unity.Mathematics.Editor\PrimitiveVectorDrawer.cs" />
+     <None Include="Library\PackageCache\com.unity.mathematics@1.2.1\Unity.Mathematics.Editor\Unity.Mathematics.Editor.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -305,6 +305,9 @@
  </Reference>
  <Reference Include="unityplastic">
  <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst.Unsafe">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
  <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>

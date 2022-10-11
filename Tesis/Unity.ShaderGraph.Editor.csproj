@@ -429,8 +429,8 @@
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.9.0\Editor\Data\Nodes\UV\RadialShearNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.9.0\Editor\Drawing\Controls\GradientControl.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.9.0\Editor\Data\Graphs\GraphDataUtils.cs" />
-     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.9.0\Editor\Generation\Contexts\TargetFieldContext.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.9.0\Editor\Drawing\Inspector\PropertyDrawers\Vector2PropertyDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.9.0\Editor\Generation\Contexts\TargetFieldContext.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.9.0\Editor\Data\Nodes\Math\Vector\DistanceNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.9.0\Editor\Data\Nodes\Math\Derivative\DDXYNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.9.0\Editor\Drawing\Views\PropertySheet.cs" />
@@ -956,6 +956,9 @@
  </Reference>
  <Reference Include="unityplastic">
  <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst.Unsafe">
+ <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
  <HintPath>C:/Users/morit/Desktop/Tesis/Tesis/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
