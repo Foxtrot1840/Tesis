@@ -20,7 +20,7 @@ public class Damage : MonoBehaviour
     {
         IDamagable damagable = other.gameObject.GetComponent<IDamagable>();
         if (damagable == null) return;
-        damagable.GetDamage(damage, other.ClosestPoint(other.transform.position));
+        damagable.GetDamage(damage, other.ClosestPoint(transform.position));
         if(_destroyObject) Destroy(gameObject);
     }
 }
