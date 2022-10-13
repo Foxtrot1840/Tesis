@@ -5,14 +5,14 @@ using UnityEngine;
 public class SpiderMaterialSwapper : MonoBehaviour
 {
 
-    public MeshRenderer renderer;
+    public SkinnedMeshRenderer renderer;
     public Material[] spiderMaterials;
     public Material[] detectionMaterials;
     private bool rendereractive;
 
     void Start()
     {
-        renderer = GetComponent<MeshRenderer>();
+        renderer = GetComponent<SkinnedMeshRenderer>();
         rendereractive = true;
     }
 
