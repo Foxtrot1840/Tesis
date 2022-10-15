@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -24,6 +25,8 @@ public class Model
     
     private bool _isGrapping, _going;
     private Vector3 _hookPoint;
+
+    private Action nextActionHook;
 
     public Model(Controller controller, Rigidbody rb, Transform player, float speedRotation,
         float speedAim, float jumpForce, CinemachineTransposer normal, CinemachineTransposer zoom, Transform hand,
@@ -90,34 +93,47 @@ public class Model
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, _maxDistanceHook))
         {
+            //Si se agarra a algo
             _hookPoint = hit.point;
-            _isGrapping = true;
-            _hook.parent = null;
-            _hook.LookAt(_hookPoint);
-            _controller.onFixedUpdate = Grapping;
-            _rb.useGravity = false;
-            _line.enabled = true;
+
+            
+            
+            if(hit.collider.gameObject.layer == 12)
+            {
+                Debug.Log("hook");
+            }
         }
         else
         {
+            //No se agarra a nada
             _hookPoint = Camera.main.transform.position + Camera.main.transform.forward * _maxDistanceHook;
             Debug.DrawLine(Camera.main.transform.position, _hookPoint, Color.magenta,5);
-            _hook.parent = null;
-            _hook.LookAt(_hookPoint);
-            _controller.onFixedUpdate += FailHook;
-            _line.enabled = true;
-            _isGrapping = true;
             _going = true;
         }
+
+        _isGrapping = true;            
+        _hook.parent = null;
+        _hook.LookAt(_hookPoint);
+        _rb.useGravity = false;
+        _line.enabled = true;
+        _controller.onFixedUpdate = MoveHook;
+
+
     }
 
     //Mueve el Gancho y cuando llega mueve al Player
-    public void Grapping()
+    public void MoveHook()
     {
         _hook.position = Vector3.Lerp(_hook.position, _hookPoint, 5 * Time.fixedDeltaTime);
         if (Vector3.Distance(_hook.position, _hookPoint) < 0.5f)
         {
-            _player.position = Vector3.Lerp(_player.position, _hookPoint - _hand.localPosition, 5 * Time.fixedDeltaTime);
+            _controller.onFixedUpdate = nextActionHook;
+        }
+    }
+    
+    public void Grapping()
+    {
+        _player.position = Vector3.Lerp(_player.position, _hookPoint - _hand.localPosition, 5 * Time.fixedDeltaTime);
             if (Vector3.Distance(_player.position, _hookPoint - _hand.localPosition) < 0.5f)
             {
                 _hook.parent = _hand;
@@ -125,7 +141,14 @@ public class Model
                 _isGrapping = false;
                 _controller.onFixedUpdate = Move;
             }
-        }
+            _line.SetPosition(0, _hand.position);
+        _line.SetPosition(1, _hook.position);
+    }
+
+    public void HookMovePlayer()
+    {
+        
+        
         _line.SetPosition(0, _hand.position);
         _line.SetPosition(1, _hook.position);
     }

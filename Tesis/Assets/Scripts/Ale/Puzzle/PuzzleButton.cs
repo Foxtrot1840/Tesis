@@ -3,23 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuzzleButton : MonoBehaviour
+public class PuzzleButton : Interactuables
 {
     public List<PuzzleCircle> circles;
     private Renderer _renderer;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         _renderer = GetComponent<Renderer>();
         _renderer.material.color = Color.white;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    protected override void Action()
     {
-        if (collision.gameObject != GameManager.instance._player) return;
-
+        Debug.Log("B");
         StartCoroutine(ChangeColor());
-        
         foreach (var circle  in circles)
         {
             circle.ChangeState();

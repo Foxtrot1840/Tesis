@@ -32,6 +32,7 @@ public class Controller : Entity
     private bool _isZoom = false;
 
     public Action onFixedUpdate = delegate{ };
+    public event Action interactables;
 
     private void Awake()
     {
@@ -81,7 +82,14 @@ public class Controller : Entity
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            _model.ShootHook();
+            if (interactables != null)
+            {
+                interactables();
+            }
+            else
+            {
+                _model.ShootHook();
+            }
         }
 
         if (Input.GetKeyUp(KeyCode.E))
