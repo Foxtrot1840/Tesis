@@ -9,10 +9,11 @@ public class PuzzleManager : MonoBehaviour
 {
     public PuzzleCircle[] circles = new PuzzleCircle[5];
     public GameObject[] buttons;
-    [SerializeField] private GameObject bridge;
+    [SerializeField] private GameObject reward;
     
     private void Start()
     {
+        reward.SetActive(false);
         foreach (var circle in circles)
         {
             circle.manager = this;
@@ -39,7 +40,7 @@ public class PuzzleManager : MonoBehaviour
             }
             if (cont == circles.Length)
             {
-                bridge.SetActive(true);
+                reward.SetActive(true);
 
                 foreach (var circle in circles)
                 {

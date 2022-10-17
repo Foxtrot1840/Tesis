@@ -36,5 +36,9 @@ public abstract class Interactuables : MonoBehaviour
     }
 
     protected abstract void Action();
-    
+
+    private void OnDisable()
+    {
+        plyController.interactables -= Action;
+    }
 }

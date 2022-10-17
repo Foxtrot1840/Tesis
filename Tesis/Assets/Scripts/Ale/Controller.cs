@@ -31,6 +31,8 @@ public class Controller : Entity
 
     private bool _isZoom = false;
 
+    public List<Enum> gearInventary = new List<Enum>();
+    
     public Action onFixedUpdate = delegate{ };
     public event Action interactables;
 
