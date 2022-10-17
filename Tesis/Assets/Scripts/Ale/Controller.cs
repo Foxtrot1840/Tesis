@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -31,8 +32,10 @@ public class Controller : Entity
 
     private bool _isZoom = false;
 
+    public LayerMask hookLayers;
     public List<Enum> gearInventary = new List<Enum>();
-    
+    public Vector3 lastSavePoint;
+
     public Action onFixedUpdate = delegate{ };
     public event Action interactables;
 
@@ -147,4 +150,10 @@ public class Controller : Entity
     {
         EventManager.TriggerEvent(EventManager.EventsType.Event_FinishGame, false);
    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, _hookDistance);
+    }
 }

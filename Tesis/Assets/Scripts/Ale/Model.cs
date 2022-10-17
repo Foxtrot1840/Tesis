@@ -81,7 +81,7 @@ public class Model
         _zoomCameraOffset.m_FollowOffset += rotation;
 
         _normalCameraOffset.m_FollowOffset.y =
-            _zoomCameraOffset.m_FollowOffset.y = Mathf.Clamp(_normalCameraOffset.m_FollowOffset.y, 0, 6f);
+            _zoomCameraOffset.m_FollowOffset.y = Mathf.Clamp(_normalCameraOffset.m_FollowOffset.y, -1f, 6f);
     }
 
     public void Jump()
@@ -99,7 +99,7 @@ public class Model
     {
         if (_isGrapping) return;
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, _maxDistanceHook))
+        if (Physics.Raycast(Camera.main.transform.position + 0.5f * Camera.main.transform.forward, Camera.main.transform.forward, out RaycastHit hit, _maxDistanceHook, _controller.hookLayers))
         {
             //Si se agarra a algo
             _hookPoint = hit.point;
