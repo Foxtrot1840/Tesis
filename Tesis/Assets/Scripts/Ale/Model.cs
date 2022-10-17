@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Cinemachine;
 using TMPro;
+using Unity.Mathematics;
 
 public class Model
 {
@@ -22,11 +23,16 @@ public class Model
     private Controller _controller;
     private LineRenderer _line;
     private float _currentSpeed;
-    
+
     private bool _isGrapping, _going;
     private Vector3 _hookPoint;
+    private Vector3 _hookOffset;
+    private quaternion _hookRotation;
 
     private Action nextActionHook;
+
+    private Vector3 _finalPos, _startPos;
+    private float lerp;
 
     public Model(Controller controller, Rigidbody rb, Transform player, float speedRotation,
         float speedAim, float jumpForce, CinemachineTransposer normal, CinemachineTransposer zoom, Transform hand,
@@ -44,6 +50,8 @@ public class Model
         _hook = hook;
         _maxDistanceHook = hookDistance;
         _line = line;
+        _hookOffset = _hook.transform.localPosition;
+        _hookRotation = _hook.transform.localRotation;
     }
 
     public void Move()
@@ -73,7 +81,7 @@ public class Model
         _zoomCameraOffset.m_FollowOffset += rotation;
 
         _normalCameraOffset.m_FollowOffset.y =
-            _zoomCameraOffset.m_FollowOffset.y = Mathf.Clamp(_normalCameraOffset.m_FollowOffset.y, 0.2f, 3.5f);
+            _zoomCameraOffset.m_FollowOffset.y = Mathf.Clamp(_normalCameraOffset.m_FollowOffset.y, 0, 6f);
     }
 
     public void Jump()
@@ -96,19 +104,32 @@ public class Model
             //Si se agarra a algo
             _hookPoint = hit.point;
 
-            
-            
             if(hit.collider.gameObject.layer == 12)
             {
-                Debug.Log("hook");
+                lerp = 0;
+                _going = true;
+                _startPos = _player.position;
+                _startPos.y += 2;
+                _finalPos = _hookPoint - _player.position;
+                _finalPos *= 2;
+                _finalPos += _player.position;
+                _finalPos.y = _startPos.y;
+                
+                Debug.DrawLine(_startPos, _finalPos, Color.blue, 5);
+                Debug.DrawLine(_startPos, _hookPoint, Color.green,5);
+                Debug.DrawLine(_finalPos, _hookPoint, Color.green,5);
+                nextActionHook = SwingHook;
+            }
+            else
+            {
+                nextActionHook = Grapping;
             }
         }
         else
         {
             //No se agarra a nada
             _hookPoint = Camera.main.transform.position + Camera.main.transform.forward * _maxDistanceHook;
-            Debug.DrawLine(Camera.main.transform.position, _hookPoint, Color.magenta,5);
-            _going = true;
+            nextActionHook = FailHook;
         }
 
         _isGrapping = true;            
@@ -117,7 +138,6 @@ public class Model
         _rb.useGravity = false;
         _line.enabled = true;
         _controller.onFixedUpdate = MoveHook;
-
 
     }
 
@@ -129,6 +149,9 @@ public class Model
         {
             _controller.onFixedUpdate = nextActionHook;
         }
+        
+        _line.SetPosition(0, _hand.position);
+        _line.SetPosition(1, _hook.position);
     }
     
     public void Grapping()
@@ -137,36 +160,40 @@ public class Model
             if (Vector3.Distance(_player.position, _hookPoint - _hand.localPosition) < 0.5f)
             {
                 _hook.parent = _hand;
-                _hook.localPosition = Vector3.zero;
+                _hook.transform.localPosition = _hookOffset;
+                _hook.transform.localRotation = _hookRotation;
                 _isGrapping = false;
-                _controller.onFixedUpdate = Move;
-            }
-            _line.SetPosition(0, _hand.position);
+                _line.enabled = false;
+            } 
+        _line.SetPosition(0, _hand.position);
         _line.SetPosition(1, _hook.position);
     }
 
-    public void HookMovePlayer()
+    public void SwingHook()
     {
-        
-        
+        Vector3 position = Vector3.Lerp(_startPos, _finalPos, lerp);
+        position.y -= Mathf.Sin(lerp * Mathf.PI) * 2;
+
+        _player.position = position;
+        lerp += Time.deltaTime * 0.35f * (_going ? 1 : -1);
+
+        if (lerp > 1 || lerp < 0) _going = !_going;
+
         _line.SetPosition(0, _hand.position);
         _line.SetPosition(1, _hook.position);
     }
 
     public void FailHook()
     {
-        _hook.position = Vector3.Lerp(_hook.position, _hookPoint, 5 * Time.fixedDeltaTime);
+        _hook.position = Vector3.Lerp(_hook.position, _hand.position, 5 * Time.fixedDeltaTime);
         if (Vector3.Distance(_hook.position, _hookPoint) < 0.5f)
         {
-            if (!_going)
-            {
+            
                 _hook.parent = _hand;
-                _hook.localPosition = Vector3.zero;
+                _hook.transform.localPosition = _hookOffset;
+                _hook.transform.localRotation = _hookRotation;
                 _controller.onFixedUpdate -= FailHook;
                 _isGrapping = false;
-            }
-            _going = false;
-            _hookPoint = _hand.position;
         }
         _line.SetPosition(0, _hand.position);
         _line.SetPosition(1, _hook.position);
@@ -177,7 +204,8 @@ public class Model
     {
         _controller.onFixedUpdate = Move;
         _hook.parent = _hand;
-        _hook.localPosition = Vector3.zero;
+        _hook.transform.localPosition = _hookOffset;
+        _hook.transform.localRotation = _hookRotation;
         _isGrapping = false;
         _rb.useGravity = true;
         _line.enabled = false;
