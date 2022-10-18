@@ -10,8 +10,6 @@ public class Message : MonoBehaviour
     [SerializeField]
     private GameObject objectMessage;
 
-    private bool activeMessage;
-
     private void Start()
     {
         Invoke("TurnOff",3);

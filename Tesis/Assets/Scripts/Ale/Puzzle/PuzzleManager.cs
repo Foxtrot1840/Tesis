@@ -13,7 +13,6 @@ public class PuzzleManager : MonoBehaviour
     
     private void Start()
     {
-        reward.SetActive(false);
         foreach (var circle in circles)
         {
             circle.manager = this;

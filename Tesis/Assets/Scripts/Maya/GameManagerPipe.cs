@@ -6,6 +6,7 @@ public class GameManagerPipe : MonoBehaviour
 {
     public GameObject pipesHolder;
     public GameObject[] pipes;
+    public GameObject gear;
 
     [SerializeField]
     int totalPipes = 0;
@@ -33,7 +34,8 @@ public class GameManagerPipe : MonoBehaviour
 
         if (correctedPipes == totalPipes)
         {
-            Debug.Log("Ganaste");
+            CanvasManager.instance.ActivePuzzle(false);
+            gear.SetActive(true);
         }
     }
 
