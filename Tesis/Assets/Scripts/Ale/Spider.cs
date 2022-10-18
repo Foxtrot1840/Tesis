@@ -12,6 +12,7 @@ public class Spider : Entity
     private NavMeshAgent _navMesh;
     private Transform _player;
     private Animator _anim;
+    public Material[] dissolveMaterials;
     
     public float _range;
         
@@ -21,6 +22,7 @@ public class Spider : Entity
     [SerializeField] private int damage;
 
     private bool _isAttack;
+    private float _lerpDissolve = 0.3f;
     
     private void Start()
     {
@@ -85,5 +87,28 @@ public class Spider : Entity
     {
         SoundManager.instance.Play(SoundID.Spider);
         base.GetDamage(damage, particles);
+    }
+
+    public override void Die()
+    {
+        GetComponentInChildren<Renderer>().materials = dissolveMaterials;
+        Material[] materials = GetComponentInChildren<Renderer>().materials;
+        _navMesh.enabled = false;
+        _anim.enabled = false;
+        StartCoroutine(DissolveSpider(materials));
+    }
+
+    IEnumerator DissolveSpider(Material[] materials)
+    {
+        while (_lerpDissolve > -1)
+        {
+            foreach (var mat in materials)
+            {
+                mat.SetFloat("_alphaDissolve",_lerpDissolve);
+            }
+            _lerpDissolve -= 0.01f;
+            yield return new WaitForSeconds(0.01f);
+        }
+        Destroy(gameObject);
     }
 }

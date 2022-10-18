@@ -9,7 +9,6 @@ public class SpiderSpawner : MonoBehaviour
 {
     private Transform[] spawners;
     [SerializeField] private GameObject spider;
-    private int counter;
 
     private void Awake()
     {
@@ -18,11 +17,7 @@ public class SpiderSpawner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (counter > 3) return;
-        
         if (other.gameObject != GameManager.instance._player) return;
-        
-        counter++;
         foreach (var spawn in spawners)
         {  
             GameObject newSpider = Instantiate(spider, spawn.transform.position, quaternion.identity);

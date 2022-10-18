@@ -1,13 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32901.82
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{1E246FA7-7ADA-6380-0122-E7550E5BE9EF}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{a76f241e-da7a-8063-0122-e7550e5be9ef}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmplifyShaderEditor", "AmplifyShaderEditor.csproj", "{4EC91B8D-F978-BCE9-E373-8FB2FFA572D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmplifyShaderEditor", "AmplifyShaderEditor.csproj", "{4ec91b8d-f978-bce9-e373-8fb2ffa572d4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{356132B9-C20F-547A-1101-8CDB2D880CD2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{356132b9-c20f-547a-1101-8cdb2d880cd2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,23 +13,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1E246FA7-7ADA-6380-0122-E7550E5BE9EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E246FA7-7ADA-6380-0122-E7550E5BE9EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E246FA7-7ADA-6380-0122-E7550E5BE9EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E246FA7-7ADA-6380-0122-E7550E5BE9EF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4EC91B8D-F978-BCE9-E373-8FB2FFA572D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4EC91B8D-F978-BCE9-E373-8FB2FFA572D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4EC91B8D-F978-BCE9-E373-8FB2FFA572D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4EC91B8D-F978-BCE9-E373-8FB2FFA572D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{356132B9-C20F-547A-1101-8CDB2D880CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{356132B9-C20F-547A-1101-8CDB2D880CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{356132B9-C20F-547A-1101-8CDB2D880CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{356132B9-C20F-547A-1101-8CDB2D880CD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{a76f241e-da7a-8063-0122-e7550e5be9ef}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{a76f241e-da7a-8063-0122-e7550e5be9ef}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{a76f241e-da7a-8063-0122-e7550e5be9ef}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{a76f241e-da7a-8063-0122-e7550e5be9ef}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ec91b8d-f978-bce9-e373-8fb2ffa572d4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ec91b8d-f978-bce9-e373-8fb2ffa572d4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ec91b8d-f978-bce9-e373-8fb2ffa572d4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ec91b8d-f978-bce9-e373-8fb2ffa572d4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{356132b9-c20f-547a-1101-8cdb2d880cd2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{356132b9-c20f-547a-1101-8cdb2d880cd2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{356132b9-c20f-547a-1101-8cdb2d880cd2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{356132b9-c20f-547a-1101-8cdb2d880cd2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B5A693CC-B49A-4D89-9514-992870537905}
 	EndGlobalSection
 EndGlobal

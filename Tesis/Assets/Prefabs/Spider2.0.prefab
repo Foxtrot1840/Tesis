@@ -301,6 +301,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageParticles: {fileID: 6960638525347524325, guid: 042629f9b192fd3419e668ea810a1aeb, type: 3}
+  dissolveMaterials:
+  - {fileID: 2100000, guid: bce8556399b33be429a1753fb049cdaa, type: 2}
+  - {fileID: 2100000, guid: 3dbe053927a78c44b9c712d62c294f06, type: 2}
+  - {fileID: 2100000, guid: 0b6023a40e15bab4680e323df4d9b004, type: 2}
+  - {fileID: 2100000, guid: 53c4a09ae6d2447419c84fa680fdccde, type: 2}
   _range: 20
   _rangeAttack: 2
   _maxHealth: 2

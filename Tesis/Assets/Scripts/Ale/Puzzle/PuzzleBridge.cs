@@ -26,6 +26,11 @@ public class PuzzleBridge : Interactuables
 
    protected override void Action()
    {
+      if (GearGraveyard.activeSelf && GearTrain.activeSelf && GearGreenHouse.activeSelf)
+      {
+         Bridge.SetActive(true);
+      }
+      
       if (plyController.gearInventary.Contains(Gears.Train))
       {
          GearTrain.SetActive(true);
@@ -39,11 +44,6 @@ public class PuzzleBridge : Interactuables
       if(plyController.gearInventary.Contains(Gears.Greenhouse))
       {
          GearGreenHouse.SetActive(true);
-      }
-
-      if (GearGraveyard.activeSelf && GearTrain.activeSelf && GearGreenHouse.activeSelf)
-      {
-         Bridge.SetActive(true);
       }
    }
 }

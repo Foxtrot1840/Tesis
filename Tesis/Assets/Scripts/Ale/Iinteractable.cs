@@ -17,11 +17,8 @@ public abstract class Interactuables : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject);
-        Debug.Log(player);
         if(other.gameObject == player)
         {
-            Debug.Log("A");
             plyController.interactables += Action;
         }
     }
@@ -30,7 +27,6 @@ public abstract class Interactuables : MonoBehaviour
     {
         if (other.gameObject == player)
         {
-            Debug.Log("C");
             plyController.interactables -= Action;
         }
     }
