@@ -26,16 +26,22 @@ public class GameManagerPipe : MonoBehaviour
         }
     }
 
+    IEnumerator TimeGear()
+    {
+        Debug.Log("GEAR");
+        yield return new WaitForSeconds(0.5f);
+        CanvasManager.instance.ActivePuzzle(false);
+        gear.SetActive(true);
+    }
+
     public void CorrectMove()
     {
         correctedPipes += 1;
 
-        Debug.Log("Correct Move");
-
         if (correctedPipes == totalPipes)
         {
-            CanvasManager.instance.ActivePuzzle(false);
-            gear.SetActive(true);
+            Time.timeScale = 1;
+            StartCoroutine(TimeGear());
         }
     }
 

@@ -12,7 +12,7 @@ public class PseudoPipe : MonoBehaviour
         transform.eulerAngles = new Vector3(0, 0, rotations[rand]);
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         transform.Rotate(new Vector3(0, 0, 90));
     }
