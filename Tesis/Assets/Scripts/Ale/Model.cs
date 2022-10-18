@@ -175,9 +175,13 @@ public class Model
         position.y -= Mathf.Sin(lerp * Mathf.PI) * 2;
 
         _player.position = position;
-        lerp += Time.deltaTime * 0.35f * (_going ? 1 : -1);
-
-        if (lerp > 1 || lerp < 0) _going = !_going;
+        float vel = Mathf.Lerp(0.5f, 0, Mathf.Abs(lerp - 0.5f));//en los extremos se hace mas lento
+        lerp += Time.deltaTime * vel * (_going ? 1 : -1);//0.35f
+        if (lerp > 1 || lerp < 0)
+        {
+            lerp = Mathf.Clamp(lerp, 0, 1);
+            _going = !_going;
+        }
 
         _line.SetPosition(0, _hand.position);
         _line.SetPosition(1, _hook.position);
