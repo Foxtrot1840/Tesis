@@ -11,7 +11,7 @@ public abstract class Interactuables : MonoBehaviour
     
     protected virtual void Start()
     {
-        player = GameManager.instance._player;
+        player = GameManager.instance.player;
         plyController = player.GetComponent<Controller>();
     }
 

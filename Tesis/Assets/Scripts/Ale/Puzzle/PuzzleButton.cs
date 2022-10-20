@@ -17,7 +17,6 @@ public class PuzzleButton : Interactuables
 
     protected override void Action()
     {
-        Debug.Log("B");
         StartCoroutine(ChangeColor());
         foreach (var circle  in circles)
         {

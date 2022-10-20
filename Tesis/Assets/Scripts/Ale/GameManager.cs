@@ -7,7 +7,7 @@ using UnityEngine.Experimental.Audio;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public GameObject _player;
+    [SerializeField] GameObject _player;
 
     public GameObject player
     {

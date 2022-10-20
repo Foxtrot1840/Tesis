@@ -17,7 +17,7 @@ public class SpiderSpawner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject != GameManager.instance._player) return;
+        if (other.gameObject != GameManager.instance.player) return;
         foreach (var spawn in spawners)
         {  
             GameObject newSpider = Instantiate(spider, spawn.transform.position, quaternion.identity);

@@ -27,6 +27,7 @@ public class PuzzleManager : MonoBehaviour
             var cont = 0;
             foreach (var circle in circles)
             {
+                Debug.Log(circle.transform.forward);
                 if (circle.transform.forward == angle)
                 {
                     Debug.Log("uno bien");

@@ -27,7 +27,7 @@ public class Spider : Entity
     private void Start()
     {
         currentHealth = _maxHealth;
-        _player = GameManager.instance._player.transform;
+        _player = GameManager.instance.player.transform;
         _navMesh = GetComponent<NavMeshAgent>();
         _anim = GetComponent<Animator>();
     }

@@ -1149,9 +1149,13 @@ MonoBehaviour:
   _bullet: {fileID: 1958266611578833855, guid: 0edd8069e21c69b4584b2a014e6a3df8, type: 3}
   _shootPoint: {fileID: 302214874302329031}
   _hook: {fileID: 5014183446012804516}
-  _hand: {fileID: 4047508289309434382}
-  _hookDistance: 50
+  _hand: {fileID: 8908800960427821061}
+  _hookDistance: 20
   _line: {fileID: 5683021474131928928}
+  hookLayers:
+    serializedVersion: 2
+    m_Bits: 8183
+  lastSavePoint: {x: 0, y: 0, z: 0}
 --- !u!114 &2422390770524411334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2508,6 +2512,10 @@ PrefabInstance:
     - target: {fileID: 8016454038226624252, guid: 37458ce14a850c048b55c2e2320445d0, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016454038226624253, guid: 37458ce14a850c048b55c2e2320445d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8051512521518922984, guid: 37458ce14a850c048b55c2e2320445d0, type: 3}
       propertyPath: m_Materials.Array.data[0]

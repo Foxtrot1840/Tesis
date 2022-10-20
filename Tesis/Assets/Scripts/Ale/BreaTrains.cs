@@ -7,10 +7,10 @@ public class BreaTrains : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject == GameManager.instance._player)
+        if (collision.gameObject == GameManager.instance.player)
         {
             collision.gameObject.transform.position =
-                GameManager.instance._player.GetComponent<Controller>().lastSavePoint;
+                GameManager.instance.player.GetComponent<Controller>().lastSavePoint;
         }
     }
 }
