@@ -25,11 +25,11 @@ public class Model
     private float _currentSpeed;
 
     private bool _isGrapping, _going;
-    private Vector3 _hookPoint;
+    public Vector3 hookPoint;
     private Vector3 _hookOffset;
     private quaternion _hookRotation;
 
-    private Action nextActionHook;
+    public Action nextActionHook;
 
     private Vector3 _finalPos, _startPos;
     private float lerp;
@@ -102,50 +102,31 @@ public class Model
         if (Physics.Raycast(Camera.main.transform.position + 0.5f * Camera.main.transform.forward, Camera.main.transform.forward, out RaycastHit hit, _maxDistanceHook, _controller.hookLayers))
         {
             //Si se agarra a algo
-            _hookPoint = hit.point;
+            hookPoint = hit.point;
 
             if(hit.collider.gameObject.layer == 12)
             {
-                lerp = 0;
-                _going = true;
-                _startPos = _player.position;
-                _startPos.y += 2;
-                _finalPos = _hookPoint - _player.position;
-                _finalPos *= 2;
-                _finalPos += _player.position;
-                _finalPos.y = _startPos.y;
-                
-                Debug.DrawLine(_startPos, _finalPos, Color.blue, 5);
-                Debug.DrawLine(_startPos, _hookPoint, Color.green,5);
-                Debug.DrawLine(_finalPos, _hookPoint, Color.green,5);
                 nextActionHook = SwingHook;
             }
             else
             {
                 nextActionHook = Grapping;
             }
+            StartHooking();
         }
         else
         {
             //No se agarra a nada
-            _hookPoint = Camera.main.transform.position + Camera.main.transform.forward * _maxDistanceHook;
+            hookPoint = Camera.main.transform.position + Camera.main.transform.forward * _maxDistanceHook;
             nextActionHook = FailHook;
         }
-
-        _isGrapping = true;            
-        _hook.parent = null;
-        _hook.LookAt(_hookPoint);
-        _rb.useGravity = false;
-        _line.enabled = true;
-        _controller.onFixedUpdate = MoveHook;
-
     }
 
     //Mueve el Gancho y cuando llega mueve al Player
     public void MoveHook()
     {
-        _hook.position = Vector3.Lerp(_hook.position, _hookPoint, 5 * Time.fixedDeltaTime);
-        if (Vector3.Distance(_hook.position, _hookPoint) < 0.5f)
+        _hook.position = Vector3.Lerp(_hook.position, hookPoint, 5 * Time.fixedDeltaTime);
+        if (Vector3.Distance(_hook.position, hookPoint) < 0.5f)
         {
             _controller.onFixedUpdate = nextActionHook;
         }
@@ -156,8 +137,8 @@ public class Model
     
     public void Grapping()
     {
-        _player.position = Vector3.Lerp(_player.position, _hookPoint - _hand.localPosition, 5 * Time.fixedDeltaTime);
-            if (Vector3.Distance(_player.position, _hookPoint - _hand.localPosition) < 0.5f)
+        _player.position = Vector3.Lerp(_player.position, hookPoint - _hand.localPosition, 5 * Time.fixedDeltaTime);
+            if (Vector3.Distance(_player.position, hookPoint - _hand.localPosition) < 0.5f)
             {
                 _hook.parent = _hand;
                 _hook.transform.localPosition = _hookOffset;
@@ -190,7 +171,7 @@ public class Model
     public void FailHook()
     {
         _hook.position = Vector3.Lerp(_hook.position, _hand.position, 5 * Time.fixedDeltaTime);
-        if (Vector3.Distance(_hook.position, _hookPoint) < 0.5f)
+        if (Vector3.Distance(_hook.position, hookPoint) < 0.5f)
         {
             
                 _hook.parent = _hand;
@@ -201,6 +182,27 @@ public class Model
         }
         _line.SetPosition(0, _hand.position);
         _line.SetPosition(1, _hook.position);
+    }
+
+    public void StartHooking()
+    {
+        _isGrapping = true;            
+        _hook.parent = null;
+        _hook.LookAt(hookPoint);
+        _rb.useGravity = false;
+        _line.enabled = true;
+        _controller.onFixedUpdate = MoveHook;
+        //DETENER ANIMACIONES
+        _controller._view.ActiveAnimator(false);
+        // Si se columpia:
+        lerp = 0;
+        _going = true;
+        _startPos = _player.position;
+        _startPos.y += 2;
+        _finalPos = hookPoint - _player.position;
+        _finalPos *= 2;
+        _finalPos += _player.position;
+        _finalPos.y = _startPos.y;
     }
     
     //Activa los movimietos del Player despues del Hook
@@ -213,5 +215,22 @@ public class Model
         _isGrapping = false;
         _rb.useGravity = true;
         _line.enabled = false;
+        _controller._view.ActiveAnimator(true);
+        
+        //Fuerza Adicional despues de columpiarse:
+        if (nextActionHook == SwingHook)
+        {
+            Debug.DrawLine(hookPoint, _player.position, Color.green, 5);
+            Vector3 dir = hookPoint - _player.position;
+            Vector2 offset = new Vector2(hookPoint.x - _player.position.x, hookPoint.z - _player.position.z);
+            
+            var a  = Quaternion.AngleAxis(180, Vector3.up) * dir;
+            dir = Quaternion.AngleAxis(90, Vector3.Cross(dir, a)) * dir;
+            
+            if((_going && lerp<0.5f)||(!_going&&lerp>0.5f)) dir = Vector3.zero;
+            
+            _rb.AddForce(dir.normalized * offset.magnitude,ForceMode.Impulse);
+            Debug.DrawLine(_player.position, _player.position + dir.normalized * offset.magnitude, Color.red, 5); //Aumentar el 0.5 para darle mas fuerza
+        }
     }
 }

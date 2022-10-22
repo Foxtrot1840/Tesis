@@ -37,4 +37,9 @@ public class View
     {
         _anim.SetTrigger("GetDamage");
     }
+
+    public void ActiveAnimator(bool active)
+    {
+        _anim.enabled = active;
+    }
 }

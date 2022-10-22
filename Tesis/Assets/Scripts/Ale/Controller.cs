@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 
 public class Controller : Entity
 {
@@ -21,6 +23,7 @@ public class Controller : Entity
     [SerializeField] private Transform _hand;
     [SerializeField] private float _hookDistance;
     [SerializeField] private LineRenderer _line;
+    [SerializeField] private float viewAngle;
 
     private CinemachineTransposer _normalCameraAim;
     private CinemachineTransposer _zoomCameraAim;
@@ -37,6 +40,7 @@ public class Controller : Entity
 
     public Action onFixedUpdate = delegate{ };
     public event Action interactables;
+    public List<Vector3> hookSwingPoint;
 
     private void Awake()
     {
@@ -90,6 +94,12 @@ public class Controller : Entity
             {
                 interactables();
             }
+            else if(FieldOfView() != Vector3.zero)
+            {
+                _model.hookPoint = FieldOfView();
+                _model.nextActionHook = _model.SwingHook;
+                _model.StartHooking();
+            }
             else
             {
                 _model.ShootHook();
@@ -134,6 +144,19 @@ public class Controller : Entity
         _anim.ResetTrigger("Jump");
     }
 
+    private Vector3 FieldOfView()
+    {
+        foreach (var point in hookSwingPoint)
+        {
+            Vector3 dir = point - transform.position;
+            if (Vector3.Angle(Camera.main.transform.forward, dir) <= viewAngle / 2)
+            {
+                return point;
+            }
+        }
+        return Vector3.zero;
+    }
+    
     public override void GetDamage(int damage)
     {
         currentHealth -= damage;
@@ -148,7 +171,7 @@ public class Controller : Entity
     public override void Die()
     {
         EventManager.TriggerEvent(EventManager.EventsType.Event_FinishGame, false);
-   }
+    }
 
     private void OnDrawGizmos()
     {
