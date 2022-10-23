@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering.UI;
 
 public class Spider : Entity
 {
@@ -83,14 +84,15 @@ public class Spider : Entity
         Gizmos.DrawWireSphere(transform.position, _rangeAttack);
     }
 
-    public override void GetDamage(int damage, Vector3 particles)
+    public override void GetDamage(int damage, Vector3 point, Vector3 normal)
     {
         SoundManager.instance.Play(SoundID.Spider);
-        base.GetDamage(damage, particles);
+        base.GetDamage(damage, point, normal);
     }
 
     public override void Die()
     {
+        Debug.Log("Mudio");
         GetComponentInChildren<Renderer>().materials = dissolveMaterials;
         Material[] materials = GetComponentInChildren<Renderer>().materials;
         _navMesh.enabled = false;

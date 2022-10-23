@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 
 public abstract class Entity : MonoBehaviour, IDamagable
@@ -16,12 +17,16 @@ public abstract class Entity : MonoBehaviour, IDamagable
         }
     }
 
-    public virtual void GetDamage(int damage, Vector3 particles)
+    public virtual void GetDamage(int damage, Vector3 point, Vector3 normal)
     {
-        var fireworks = Instantiate(damageParticles);
-        fireworks.transform.position = particles;
-        Destroy(fireworks,5f);
-        currentHealth -= damage;
+        if (damageParticles != null)
+        {
+            var fireworks = Instantiate(damageParticles);
+            fireworks.transform.position = point;
+            fireworks.transform.rotation = Quaternion.Euler(normal);
+            Destroy(fireworks,5f);
+            currentHealth -= damage;
+        }
         if (currentHealth <= 0)
         {
             Die();
