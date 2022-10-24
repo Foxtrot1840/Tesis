@@ -4,21 +4,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class SpiderBulb : Entity
+public class SpiderBulb : MonoBehaviour,IDamagable
 {
-    private void Start()
+    public void GetDamage(int damage)
     {
-        currentHealth = 1;
+        SoundManager.instance.Play(SoundID.Glass);
+        transform.parent.GetComponent<Spider>().Die();
     }
 
-    public override void GetDamage(int damage, Vector3 point, Vector3 normal)
+    public void GetDamage(int damage, Vector3 point, Vector3 normal)
     {
-        Die();
-    }
-
-    public override void Die()
-    {
-        Debug.Log("B");
-       gameObject.GetComponentInParent<Entity>().Die();
+        SoundManager.instance.Play(SoundID.Glass);
+        transform.parent.GetComponent<Spider>().Die();
     }
 }

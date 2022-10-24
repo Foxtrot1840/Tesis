@@ -81,5 +81,6 @@ public class SoundManager : MonoBehaviour
 
     public enum SoundID 
     {
-        Spider
+        Spider,
+        Glass
     }

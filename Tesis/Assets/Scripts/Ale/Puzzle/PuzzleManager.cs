@@ -19,6 +19,11 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.O))reward.SetActive(true);
+    }
+
     public void Check()
     {
         if (circles.All(x => x._activate == false))

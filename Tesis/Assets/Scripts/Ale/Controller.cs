@@ -25,6 +25,7 @@ public class Controller : Entity
     [SerializeField] private float _hookDistance;
     [SerializeField] private LineRenderer _line;
     [SerializeField] private float viewAngle;
+    [SerializeField] public LayerMask stopWalking;
 
     private CinemachineTransposer _normalCameraAim;
     private CinemachineTransposer _zoomCameraAim;
@@ -166,6 +167,13 @@ public class Controller : Entity
             }
         }
         return Vector3.zero;
+    }
+
+    public void GetLife(int amount)
+    {
+        currentHealth += amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, _maxHealth);
+        EventManager.TriggerEvent(EventManager.EventsType.Event_GetDamage, currentHealth, _maxHealth);
     }
     
     public override void GetDamage(int damage)

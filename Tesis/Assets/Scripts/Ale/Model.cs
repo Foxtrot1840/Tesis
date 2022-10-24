@@ -57,6 +57,7 @@ public class Model
     public void Move()
     {
         Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+        if(Physics.Raycast( _player.transform.position  + _player.up * 0.5f, _player.transform.forward,0.5f, _controller.stopWalking)) dir.z = Mathf.Clamp(dir.z, -1,0);
         _rb.MovePosition(_player.transform.position + Vector3.Normalize(_player.transform.right * dir.x + _player.transform.forward * dir.z) * _currentSpeed * Time.fixedDeltaTime);
         _controller._view.UpdateMove(dir);
     }
@@ -112,7 +113,6 @@ public class Model
             {
                 nextActionHook = Grapping;
             }
-            StartHooking();
         }
         else
         {
@@ -120,6 +120,7 @@ public class Model
             hookPoint = Camera.main.transform.position + Camera.main.transform.forward * _maxDistanceHook;
             nextActionHook = FailHook;
         }
+        StartHooking();
     }
 
     //Mueve el Gancho y cuando llega mueve al Player

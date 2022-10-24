@@ -71,7 +71,6 @@ public class Spider : Entity
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, _rangeAttack))
         {
             IDamagable dmg = hit.collider.GetComponent<IDamagable>();
-            Debug.Log(hit.collider.name);
             if(dmg != null) dmg.GetDamage(damage);
         }
     }
@@ -92,7 +91,6 @@ public class Spider : Entity
 
     public override void Die()
     {
-        Debug.Log("Mudio");
         GetComponentInChildren<Renderer>().materials = dissolveMaterials;
         Material[] materials = GetComponentInChildren<Renderer>().materials;
         _navMesh.enabled = false;

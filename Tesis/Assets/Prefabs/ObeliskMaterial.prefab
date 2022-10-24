@@ -9748,6 +9748,7 @@ GameObject:
   - component: {fileID: 2479785264027367320}
   - component: {fileID: 350932288901852828}
   - component: {fileID: 1204233096}
+  - component: {fileID: 1183686594}
   m_Layer: 0
   m_Name: ObeliskMaterial
   m_TagString: Untagged
@@ -9849,3 +9850,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4068373912626513877, guid: 50ead639d4197004ebc4f607014cf076, type: 3}
+--- !u!114 &1183686594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4136850922883438157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b9e20c08856d54da454db7479316fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 2

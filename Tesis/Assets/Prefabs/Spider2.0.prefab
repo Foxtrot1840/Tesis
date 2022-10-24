@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &630976521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 630976522}
+  - component: {fileID: 630976523}
+  - component: {fileID: 630976524}
+  m_Layer: 10
+  m_Name: LampHealth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &630976522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630976521}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: 1.26, z: -0.96}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2784716308271534118}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &630976523
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630976521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &630976524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630976521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6029978e9e5b33f42b5ba82b84533cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &323185155283756304
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +307,7 @@ Transform:
   - {fileID: 2116157220879002935}
   - {fileID: 4635347218887860508}
   - {fileID: 9119500567504458358}
+  - {fileID: 630976522}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 41.799, z: 0}
@@ -300,7 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6670c056fd26d144b743bb4ac3549e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageParticles: {fileID: 6960638525347524325, guid: 042629f9b192fd3419e668ea810a1aeb, type: 3}
+  damageParticles: {fileID: 6960638525347524325, guid: 6c50dc114234e4f4c96efd6ff41c130d, type: 3}
   dissolveMaterials:
   - {fileID: 2100000, guid: bce8556399b33be429a1753fb049cdaa, type: 2}
   - {fileID: 2100000, guid: 3dbe053927a78c44b9c712d62c294f06, type: 2}
@@ -308,7 +366,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 53c4a09ae6d2447419c84fa680fdccde, type: 2}
   _range: 20
   _rangeAttack: 2
-  _maxHealth: 2
+  _maxHealth: 3
   cooldown: 2
   damage: 1
 --- !u!195 &3309754398366976662
@@ -343,10 +401,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.73018265
-  m_Height: 2.417555
-  m_Direction: 2
-  m_Center: {x: 0, y: 0.82201004, z: -0.101222515}
+  m_Radius: 0.41472727
+  m_Height: 1.9654553
+  m_Direction: 0
+  m_Center: {x: -0.068053424, y: 0.72, z: 0.34141877}
 --- !u!1 &3646502865464122587
 GameObject:
   m_ObjectHideFlags: 0
