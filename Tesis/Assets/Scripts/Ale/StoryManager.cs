@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
@@ -9,17 +10,25 @@ using UnityEngine.UI;
 public class StoryManager : MonoBehaviour
 {
    [SerializeField] private StoryMoment[] story = new StoryMoment[2];
-   [SerializeField] private Text message;
+   [SerializeField] private TextMeshProUGUI message;
    private int actualMoment;
+   public static StoryManager instance;
+
+   private void Awake()
+   {
+      if (instance == null) instance = this;
+      else Destroy(this);
+   }
+
    private void Start()
    {
       actualMoment = -1;
       ChangeStory();
    }
 
-   void ChangeStory()
+   public void ChangeStory()
    {
-      if (actualMoment > 0)
+      if (actualMoment >= 0)
       {
          foreach (var icon in story[actualMoment].icons)
          {
@@ -27,7 +36,6 @@ public class StoryManager : MonoBehaviour
          }
       }
       actualMoment++;
-      message.GetComponent<GameObject>().SetActive(true);
       message.text = story[actualMoment].message;
       foreach (var icon in story[actualMoment].icons)
       {
@@ -38,7 +46,7 @@ public class StoryManager : MonoBehaviour
 
    private void TurnOffMessage()
    {
-      message.GetComponent<GameObject>().SetActive(true);
+      message.text = "";
    }
    
 }

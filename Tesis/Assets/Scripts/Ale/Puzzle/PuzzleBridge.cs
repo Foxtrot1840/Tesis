@@ -21,7 +21,7 @@ public class PuzzleBridge : Interactuables
       GearTrain.SetActive(false);
       GearGraveyard.SetActive(false);
       GearGreenHouse.SetActive(false);
-      Bridge.SetActive(false);
+      Bridge.SetActive(true);
    }
 
    protected override void Action()
@@ -43,7 +43,7 @@ public class PuzzleBridge : Interactuables
       
       if (GearGraveyard.activeSelf && GearTrain.activeSelf && GearGreenHouse.activeSelf)
       {
-         Bridge.SetActive(true);
+         Bridge.SetActive(false);
       }
    }
 }

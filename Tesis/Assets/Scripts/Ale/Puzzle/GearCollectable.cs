@@ -9,6 +9,11 @@ public class GearCollectable : Interactuables
     protected override void Action()
     {
        plyController.gearInventary.Add(type);
+
+       if (plyController.gearInventary.Count >= 3)
+       {
+           StoryManager.instance.ChangeStory();
+       }
        Destroy(gameObject);
     }
 }

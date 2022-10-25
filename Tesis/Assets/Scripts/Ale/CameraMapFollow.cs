@@ -19,6 +19,6 @@ public class CameraMapFollow : MonoBehaviour
         newPosition.y = transform.position.y;
         transform.position = newPosition;
         
-        transform.rotation = quaternion.Euler(90f,_player.rotation.y,0f);
+        //transform.rotation = quaternion.Euler(90f,_player.rotation.y,0f);
     }
 }
