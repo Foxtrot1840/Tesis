@@ -42,7 +42,7 @@ public class Controller : Entity
 
     public Action onFixedUpdate = delegate{ };
     public event Action interactables;
-    public List<Vector3> hookSwingPoint;
+    public List<Transform> hookSwingPoint;
 
     private void Awake()
     {
@@ -92,23 +92,26 @@ public class Controller : Entity
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (interactables != null)
+            interactables?.Invoke();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q) && !_model.isHooking)
+        {
+            _model.hookPoint = FieldOfView();
+            if(_model.hookPoint != null)
             {
-                interactables();
-            }
-            else if(FieldOfView() != Vector3.zero)
-            {
-                _model.hookPoint = FieldOfView();
-                _model.nextActionHook = _model.SwingHook;
-                _model.StartHooking();
+                _model.hookPoint.GetComponent<HookPoint>().message.SetActive(false);
+                _line.enabled = true;
+                onFixedUpdate = _model.MoveHook;
             }
             else
             {
-                _model.ShootHook();
+                onFixedUpdate = _model.FailHook;
             }
+            _model.isHooking = true;
         }
 
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.Q))
         {
             _model.StopHooking();
         }
@@ -156,17 +159,17 @@ public class Controller : Entity
         _anim.ResetTrigger("Jump");
     }
 
-    private Vector3 FieldOfView()
+    private Transform FieldOfView()
     {
         foreach (var point in hookSwingPoint)
         {
-            Vector3 dir = point - transform.position;
+            Vector3 dir = point.position - transform.position;
             if (Vector3.Angle(Camera.main.transform.forward, dir) <= viewAngle / 2)
             {
                 return point;
             }
         }
-        return Vector3.zero;
+        return null;
     }
 
     public void GetLife(int amount)

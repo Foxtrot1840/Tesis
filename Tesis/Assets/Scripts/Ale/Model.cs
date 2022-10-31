@@ -24,8 +24,9 @@ public class Model
     private LineRenderer _line;
     private float _currentSpeed;
 
-    private bool _isGrapping, _going;
-    public Vector3 hookPoint;
+    public bool isHooking;
+    private bool _going;
+    public Transform hookPoint;
     private Vector3 _hookOffset;
     private quaternion _hookRotation;
 
@@ -51,7 +52,7 @@ public class Model
         _maxDistanceHook = hookDistance;
         _line = line;
         _hookOffset = _hook.transform.localPosition;
-        _hookRotation = _hook.transform.localRotation;
+        _hookRotation = _hook.localRotation;
     }
 
     public void Move()
@@ -96,14 +97,14 @@ public class Model
     }
 
     //Calcula hacia donde va el gancho y deactiva funciones del Player
-    public void ShootHook()
+    /*public void ShootHook()
     {
         if (_isGrapping) return;
 
         if (Physics.Raycast(Camera.main.transform.position + 0.5f * Camera.main.transform.forward, Camera.main.transform.forward, out RaycastHit hit, _maxDistanceHook, _controller.hookLayers))
         {
             //Si se agarra a algo
-            hookPoint = hit.point;
+            hookPoint.transform.position = hit.point;
 
             if(hit.collider.gameObject.layer == 12)
             {
@@ -121,30 +122,30 @@ public class Model
             nextActionHook = FailHook;
         }
         StartHooking();
-    }
+    }*/
 
     //Mueve el Gancho y cuando llega mueve al Player
     public void MoveHook()
     {
-        _hook.position = Vector3.Lerp(_hook.position, hookPoint, 5 * Time.fixedDeltaTime);
-        if (Vector3.Distance(_hook.position, hookPoint) < 0.5f)
+        _hook.position = Vector3.Lerp(_hook.position, hookPoint.position, 5 * Time.fixedDeltaTime);
+        if (Vector3.Distance(_hook.position, hookPoint.position) < 0.5f)
         {
-            _controller.onFixedUpdate = nextActionHook;
+            StartHooking();
+            _controller.onFixedUpdate -= MoveHook;
         }
-        
         _line.SetPosition(0, _hand.position);
         _line.SetPosition(1, _hook.position);
     }
     
     public void Grapping()
     {
-        _player.position = Vector3.Lerp(_player.position, hookPoint - _hand.localPosition, 5 * Time.fixedDeltaTime);
-            if (Vector3.Distance(_player.position, hookPoint - _hand.localPosition) < 0.5f)
+        _player.position = Vector3.Lerp(_player.position, hookPoint.position - _hand.localPosition, 5 * Time.fixedDeltaTime);
+            if (Vector3.Distance(_player.position, hookPoint.position - _hand.localPosition) < 0.5f)
             {
                 _hook.parent = _hand;
                 _hook.transform.localPosition = _hookOffset;
                 _hook.transform.localRotation = _hookRotation;
-                _isGrapping = false;
+                isHooking = false;
                 _line.enabled = false;
             } 
         _line.SetPosition(0, _hand.position);
@@ -157,6 +158,7 @@ public class Model
         position.y -= Mathf.Sin(lerp * Mathf.PI) * 2;
 
         _player.position = position;
+        
         float vel = Mathf.Lerp(0.5f, 0, Mathf.Abs(lerp - 0.5f));//en los extremos se hace mas lento
         lerp += Time.deltaTime * vel * (_going ? 1 : -1);//0.35f
         if (lerp > 1 || lerp < 0)
@@ -164,7 +166,10 @@ public class Model
             lerp = Mathf.Clamp(lerp, 0, 1);
             _going = !_going;
         }
-
+        
+        Debug.DrawLine(_startPos, _finalPos, Color.green);
+        Debug.DrawLine(position, hookPoint.transform.position, Color.red);
+        
         _line.SetPosition(0, _hand.position);
         _line.SetPosition(1, _hook.position);
     }
@@ -172,14 +177,9 @@ public class Model
     public void FailHook()
     {
         _hook.position = Vector3.Lerp(_hook.position, _hand.position, 5 * Time.fixedDeltaTime);
-        if (Vector3.Distance(_hook.position, hookPoint) < 0.5f)
+        if (Vector3.Distance(_hook.position, hookPoint.position) < 0.5f)
         {
-            
-                _hook.parent = _hand;
-                _hook.transform.localPosition = _hookOffset;
-                _hook.transform.localRotation = _hookRotation;
-                _controller.onFixedUpdate -= FailHook;
-                _isGrapping = false;
+           StopHooking();
         }
         _line.SetPosition(0, _hand.position);
         _line.SetPosition(1, _hook.position);
@@ -187,23 +187,38 @@ public class Model
 
     public void StartHooking()
     {
-        _isGrapping = true;            
         _hook.parent = null;
-        _hook.LookAt(hookPoint);
+        _hook.LookAt(hookPoint.position);
+        _rb.velocity = Vector3.zero;
         _rb.useGravity = false;
         _line.enabled = true;
-        _controller.onFixedUpdate = MoveHook;
         //DETENER ANIMACIONES
         _controller._view.ActiveAnimator(false);
         // Si se columpia:
-        lerp = 0;
-        _going = true;
-        _startPos = _player.position;
-        _startPos.y += 2;
-        _finalPos = hookPoint - _player.position;
-        _finalPos *= 2;
-        _finalPos += _player.position;
-        _finalPos.y = _startPos.y;
+        switch (hookPoint.GetComponent<HookPoint>().movement)
+        {
+            case HookPoint.HookMovements.Normal:
+                _controller.onFixedUpdate += Grapping;
+                break;
+            case HookPoint.HookMovements.Swing:
+                
+                lerp = 0;
+                _going = true;
+                _startPos = _player.position;
+                _startPos.y += 2;
+                _finalPos = hookPoint.position - _player.position;
+                _finalPos *= 2;
+                _finalPos += _player.position;
+                _finalPos.y = _startPos.y;
+                
+                Debug.DrawLine(_startPos, _finalPos, Color.blue, 10f);
+                
+                _controller.onFixedUpdate += SwingHook;
+                break;
+            default:
+                Debug.Log("Error en HookPoint no tiene asignado el movimiento");
+                throw new ArgumentOutOfRangeException();
+        }
     }
     
     //Activa los movimietos del Player despues del Hook
@@ -213,17 +228,17 @@ public class Model
         _hook.parent = _hand;
         _hook.transform.localPosition = _hookOffset;
         _hook.transform.localRotation = _hookRotation;
-        _isGrapping = false;
+        isHooking = false;
         _rb.useGravity = true;
         _line.enabled = false;
         _controller._view.ActiveAnimator(true);
         
         //Fuerza Adicional despues de columpiarse:
-        if (nextActionHook == SwingHook)
+        if (hookPoint.GetComponent<HookPoint>().movement == HookPoint.HookMovements.Swing)
         {
-            Debug.DrawLine(hookPoint, _player.position, Color.green, 5);
-            Vector3 dir = hookPoint - _player.position;
-            Vector2 offset = new Vector2(hookPoint.x - _player.position.x, hookPoint.z - _player.position.z);
+            Debug.DrawLine(hookPoint.transform.position, _player.position, Color.green, 5);
+            Vector3 dir = hookPoint.position - _player.position;
+            Vector2 offset = new Vector2(hookPoint.position.x - _player.position.x, hookPoint.position.z - _player.position.z);
             
             var a  = Quaternion.AngleAxis(180, Vector3.up) * dir;
             dir = Quaternion.AngleAxis(90, Vector3.Cross(dir, a)) * dir;
